@@ -5,24 +5,37 @@ import OurTeachers from './components/OurTeachers';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
 
+import Main from './components/Main';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import './app.css';
 
 
-function App() {
+const App = () => {
   return (
-    <>
-      <main className='app'>
-        <div className='logo'>photo passion</div>
-        <div className='app_tagline'><p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever…</p><p>It remembers little things, long after you have forgotten everything.”</p><p><span>— Aaron Siskind —</span></p></div>
-        <button className='app__button' type="button">Check</button>
-      </main>
-      <Navigation className="navigation"/>
-      <AboutUs className="about-us"/>
-      <OurTeachers className="our-teachers"/>
-      <OurCourses className="our-courses"/>
-      <Contact className="contact"/>
-      <Cart className="cart"/>
-    </>
+    <Router>
+      <Route path="/" exact component={Main}>
+        <Main/>
+      </Route>
+      <Route path="/home/" component={Navigation}>
+          <Navigation className="navigation"/>
+      </Route>
+      <Route path="/home/about-us" component={AboutUs}>
+          <AboutUs className="about-us"/>
+      </Route>
+      <Route path="/home/our-teachers" component={OurTeachers}>
+          <OurTeachers className="our-teachers"/>
+      </Route>
+      <Route path="/home//our-courses" component={OurCourses}>
+          <OurCourses className="our-courses" />
+      </Route>
+      <Route path="/home/contact" component={Contact}>
+          <Contact className="contact"/>
+      </Route>
+      <Route path="/home/cart" component={Cart}>
+          <Cart className="cart"/>
+      </Route>
+    </Router>
   );
 }
 

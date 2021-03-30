@@ -3,7 +3,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     /* background-color: pink; */
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -13,6 +13,7 @@ nav {
 
 nav .logo {
     color: black;
+    grid-column: 1 / 2;
 }
 
 .nav-menu {

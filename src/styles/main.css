@@ -1,0 +1,60 @@
+.main {
+    /* background-image: url('backgrounds/back_2.jpg'); */
+    /* background-size: cover; */
+    min-height: 100vh;
+    letter-spacing: .15em;
+    line-height: 4.8em;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7rem;
+    padding: .3em 0 0 1.5em;
+    letter-spacing: .1em;
+    /* color: rgb(194, 107, 26); */
+    /* color: white; */
+    /* background-color: green; */
+    grid-column: 1 / -1;
+    /* grid-row: 1 / -1; */
+}
+
+.main_tagline {
+    /* background-color: yellow; */
+    /* margin: 5vh 10vw 5vh auto; */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.main_tagline p {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2em;
+    /* text-shadow: 9px 9px 10px 5px #acacac; */
+}
+
+.main_tagline span {
+    font-size: .45em;
+    /* font-weight: bold; */
+    /* align-self: end; */
+    /* background-color: yellow; */
+    display: block;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.main__button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7em;
+    letter-spacing: .2em;
+    /* padding: .6em 1.7em; */
+    /* border-radius: 7%; */
+    border: none;
+    /* margin: 5vh 10vw 20vh 10vw; */
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+section {
+    min-height: 93vh
+}
