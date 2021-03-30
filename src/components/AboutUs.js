@@ -5,7 +5,7 @@ import '../styles/about-us.css';
 const AboutUs = () => {
 
     return (
-        <div>About</div>
+        <section>About</section>
     )
     
 }

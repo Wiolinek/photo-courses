@@ -1,0 +1,38 @@
+nav {
+    min-height: 7vh;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /* background-color: pink; */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo {
+    color: black;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu-item {
+    list-style: none;
+    /* background-color: red; */
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: .2em;
+}
+
+.nav-menu-icon {
+    list-style: none;
+    /* background-color: red; */
+    text-align: center;
+}
