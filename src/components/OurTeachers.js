@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Course from './Course';
 
@@ -7,7 +7,7 @@ import '../styles/our-teachers.css';
 
 const OurTeachers = () => {
 
-    const [teachers, setTeachers] = useState([])
+    const [teachers, setTeachers] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:3030/teachers`)
@@ -26,9 +26,9 @@ const OurTeachers = () => {
             <div className='teachers__courses'>
                 <h3>Upcomming courses</h3>
                 <ul className='teachers__courses-list'>
+                    {/* <Course />
                     <Course />
-                    <Course />
-                    <Course />
+                    <Course /> */}
                 </ul>
             </div>  
         </div>

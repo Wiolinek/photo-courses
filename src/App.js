@@ -26,7 +26,7 @@ const App = () => {
       <Route path="/home/our-teachers" component={OurTeachers}>
           <OurTeachers className="our-teachers"/>
       </Route>
-      <Route path="/home//our-courses" component={OurCourses}>
+      <Route path="/home/our-courses" component={OurCourses}>
           <OurCourses className="our-courses" />
       </Route>
       <Route path="/home/contact" component={Contact}>

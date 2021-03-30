@@ -1,13 +1,19 @@
 import '../styles/course.css';
 
-const Course = () => {
+
+
+const Course = ( {course} ) => {
+
+
 
     return (
         <li>
-            <h2>Course Name</h2>
-            <p>Date</p>
-            <p>Place</p>
-            <p>Price</p>
+            <h2>{course.name}</h2>
+            <p>{course.level}</p>
+            <p>{course.duration}</p>
+            <p>{course.date}</p>
+            <p>{course.plate}</p>
+            <p>{course.price}</p>
         </li>
     )
     
