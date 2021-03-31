@@ -1,0 +1,70 @@
+.course-cart {
+    background-size: cover;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .9em;
+    border-radius: 6px;
+    box-shadow: 9px 9px 10px 3px #acacac;
+}
+
+.course-cart__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7em;
+    letter-spacing: .03em;
+}
+
+.course-cart__level {
+    font-size: 1.4em;
+    letter-spacing: .07em;
+    margin-top: .4em;
+}
+
+.course-cart__detail-info {
+    /* background-color: orange; */
+}
+
+.course-cart__duration, .course-cart__date, .course-cart__place {
+    /* background-color: red; */
+    display: flex;
+    padding: .1em;
+    margin-bottom: .5em;
+}
+
+.course-cart__duration p, .course-cart__date p, .course-cart__place p {
+    display: inline-block;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    margin-left: .5em;
+    align-self: center;
+    font-weight: bold;
+    /* background-color: green; */
+}
+
+.course-cart__buy {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.3em;
+}
+
+.course-cart__buy button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .3em;
+    color: black;
+    padding: .6em 1.5em;
+    border-radius: 6%;
+    border: none;
+    background-color: rgb(105, 105, 114);
+    outline: none;
+    cursor: pointer;  
+}
+
+.course-cart__buy p {
+    display: inline-block;
+    font-size: 1.7em;
+    font-weight: bold;
+}
