@@ -1,39 +1,61 @@
 nav {
     min-height: 7vh;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    /* background-color: pink; */
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    width: 100vw;
+    background-color: rgb(105, 105, 114);
 }
 
 nav .logo {
-    color: black;
-    grid-column: 1 / 2;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7rem;
+    padding: .3em 0 0 1.5em;
+    letter-spacing: .1em;
+    /* background-color: green; */
+    grid-column: 1;
+    /* align-self: start; */
 }
 
 .nav-menu {
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    align-items: end;
 }
 
 .nav-menu-item {
     list-style: none;
     /* background-color: red; */
     text-align: center;
+    /* border: 1px solid black; */
+    align-self: center;
+    padding: .3em;
+}
+
+.nav-menu-item a {
     font-family: 'Oswald', sans-serif;
     font-size: 1.1rem;
     letter-spacing: .2em;
+    text-decoration: none;
+    color: black;
+    padding: .2em 1em;
+    /* background-color: rgb(105, 105, 105); */
 }
 
 .nav-menu-icon {
     list-style: none;
     /* background-color: red; */
     text-align: center;
+    align-self: center;
+    padding: .2em;
+}
+
+.nav-menu-icon a {
+    /* background-color: yellow; */
+    color: black;
+    padding: .2em;
 }
