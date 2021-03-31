@@ -1,0 +1,27 @@
+.courses__intro {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    letter-spacing: .02em;
+    word-spacing: .15em;
+    font-weight: 300;
+}
+
+.courses__filters {
+    min-height: 10vh;
+    font-size: 2em;
+    background-color: rgb(105, 105, 114);
+    margin-top: 5vh;
+}
+.courses__list {
+    /* background-color: pink; */
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, .6fr));
+    grid-template-rows: repeat(auto-fill, minmax(550px, 1fr));
+    grid-gap: 5em;
+    margin: 10vh 0;
+}
+
+.course-cart {
+    min-height: 50vh;
+}

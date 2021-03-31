@@ -3,6 +3,7 @@ import AboutUs from './components/AboutUs';
 import OurCourses from './components/OurCourses';
 import OurTeachers from './components/OurTeachers';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Cart from './components/Cart';
 
 import Main from './components/Main';
@@ -18,22 +19,25 @@ const App = () => {
         <Main/>
       </Route>
       <Route path="/home/" component={Navigation}>
-          <Navigation className="navigation"/>
+          <Navigation/>
       </Route>
       <Route path="/home/about-us" component={AboutUs}>
-          <AboutUs className="about-us"/>
+          <AboutUs/>
       </Route>
       <Route path="/home/our-teachers" component={OurTeachers}>
-          <OurTeachers className="our-teachers"/>
+          <OurTeachers/>
       </Route>
       <Route path="/home/our-courses" component={OurCourses}>
-          <OurCourses className="our-courses" />
+          <OurCourses/>
       </Route>
       <Route path="/home/contact" component={Contact}>
-          <Contact className="contact"/>
+          <Contact/>
       </Route>
       <Route path="/home/cart" component={Cart}>
-          <Cart className="cart"/>
+          <Cart/>
+      </Route>
+      <Route path="/home/" component={Footer}>
+          <Footer/>
       </Route>
     </Router>
   );
