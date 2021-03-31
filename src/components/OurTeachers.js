@@ -17,15 +17,15 @@ const OurTeachers = () => {
     }, []);
 
     let teachersList = teachers.map(teacher =>
-        <div key={teacher.id} className='teachers__cart'>
-            <img src={teacher.photo} alt={teacher.teacher_name} className='teachers__img'></img>
-            <div className='teachers__info'>
-                <h2 className='teachers__name'>{teacher.teacher_name}</h2>
-                <p className='teachers__desc'>{teacher.description}</p>
+        <div key={teacher.id} className='teachers-cart'>
+            <img src={teacher.photo} alt={teacher.teacher_name} className='teachers-cart__img'></img>
+            <div className='teachers-cart__info'>
+                <h2 className='teachers-cart__name'>{teacher.teacher_name}</h2>
+                <p className='teachers-cart__desc'>{teacher.description}</p>
             </div>
-            <div className='teachers__courses'>
+            <div className='teachers-cart__courses'>
                 <h3>Upcomming courses</h3>
-                <ul className='teachers__courses-list'>
+                <ul className='teachers-cart__courses-list'>
                     {/* <Course />
                     <Course />
                     <Course /> */}
@@ -37,10 +37,11 @@ const OurTeachers = () => {
 
     return (
         <section className='teachers'>
-            {teachersList}
+            <h1>Meet our tutors...</h1>
+            <p className='teachers__intro'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel modi consequuntur omnis nisi magnam voluptate consectetur iure, placeat veritatis dolorum provident ab pariatur sequi! Dolor consequuntur molestiae explicabo sapiente impedit odit laborum architecto nam. Nemo ipsa odio vitae enim error, sapiente, ratione nisi corporis delectus doloremque optio nihil reprehenderit iure quaerat perspiciatis libero eius expedita temporibus! Laborum quae voluptatibus voluptas ut, sapiente repellat quaerat tempora fuga explicabo veritatis sit enim, culpa facere, eaque aperiam. At praesentium quidem illo eos ut, tempora repudiandae. Quos fugit non autem, dolores fuga accusamus tempore porro nihil similique labore eos exercitationem totam eum sequi optio.</p>
+            <ul className='teachers__list'>{teachersList}</ul>
         </section>
     )
-
 }
 
 export default OurTeachers;
