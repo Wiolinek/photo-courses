@@ -1,0 +1,33 @@
+.contact {
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact__intro {
+    font-size: 2em;
+    letter-spacing: .02em;
+    word-spacing: .15em;
+    font-weight: 300;
+    padding: 0 .5em;
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    margin: 3.5em 1em;
+}
+
+.contact__details p {
+    font-size: 1.5em;
+    margin-left: .5em;
+}
+
+.contact__address{
+    margin-top: 1em;
+}
+
+.contact__phone p, .contact__address p, .contact__mail p {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-left: .5em;
+}
