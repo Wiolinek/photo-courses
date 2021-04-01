@@ -11,13 +11,7 @@ nav {
 }
 
 nav .logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.7rem;
-    padding: .3em 0 0 1.5em;
-    letter-spacing: .1em;
-    /* background-color: green; */
     grid-column: 1;
-    /* align-self: start; */
 }
 
 .nav-menu {
@@ -25,6 +19,7 @@ nav .logo {
     grid-template-columns: 3fr 3fr 3fr 3fr 1fr 1fr;
     /* align-items: center; */
     align-items: end;
+    padding-right: 3em;
 }
 
 .nav-menu-item {
@@ -51,7 +46,7 @@ nav .logo {
     /* background-color: red; */
     text-align: center;
     align-self: center;
-    padding: .2em;
+    padding: .5em .2em .2em .2em;
 }
 
 .nav-menu-icon a {
