@@ -4,3 +4,33 @@
     box-sizing: border-box;
     font-size: 16px;
 }
+
+section {
+    min-height: 90vh;
+    width: 80%;
+    margin: 15vh auto 0;
+}
+
+section h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 3vh;
+    letter-spacing: .08em;
+    padding: 0 .4em;
+}
+
+.logo {
+    letter-spacing: .1em;
+    grid-column: 1 / -1;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7rem;
+    padding: .3em 0 0 .5em;
+    letter-spacing: .1em;
+}
+
+.logo a {
+    font-size: 1.7rem;
+    padding: .3em 0 0 .5em;
+    text-decoration: none;
+    color: black;
+}

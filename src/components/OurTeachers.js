@@ -1,20 +1,10 @@
-import { useEffect, useState } from 'react';
-
 import Course from './Course';
 
 import '../styles/our-teachers.css';
 
 
-const OurTeachers = () => {
+const OurTeachers = ( {teachers}) => {
 
-    const [teachers, setTeachers] = useState([]);
-
-    useEffect(() => {
-        fetch(`http://localhost:3030/teachers`)
-        .then(response => response.json())
-        .then(result => setTeachers(result))
-        .catch(error => console.log(`error ${error}`))
-    }, []);
 
     let teachersList = teachers.map(teacher =>
         <div key={teacher.id} className='teachers-cart'>
@@ -37,7 +27,7 @@ const OurTeachers = () => {
 
     return (
         <section className='teachers'>
-            <h1>Meet our tutors...</h1>
+            <h1>Meet our instructors...</h1>
             <p className='teachers__intro'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel modi consequuntur omnis nisi magnam voluptate consectetur iure, placeat veritatis dolorum provident ab pariatur sequi! Dolor consequuntur molestiae explicabo sapiente impedit odit laborum architecto nam. Nemo ipsa odio vitae enim error, sapiente, ratione nisi corporis delectus doloremque optio nihil reprehenderit iure quaerat perspiciatis libero eius expedita temporibus! Laborum quae voluptatibus voluptas ut, sapiente repellat quaerat tempora fuga explicabo veritatis sit enim, culpa facere, eaque aperiam. At praesentium quidem illo eos ut, tempora repudiandae. Quos fugit non autem, dolores fuga accusamus tempore porro nihil similique labore eos exercitationem totam eum sequi optio.</p>
             <ul className='teachers__list'>{teachersList}</ul>
         </section>

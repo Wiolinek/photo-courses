@@ -11,6 +11,7 @@
     letter-spacing: .02em;
     word-spacing: .15em;
     font-weight: 300;
+    padding: 0 .5em;
 }
 
 .teachers-cart {
@@ -47,14 +48,14 @@
 .teachers-cart__desc {
     font-family: 'Dosis', sans-serif;
     font-size: 2rem;
-    line-height: 1.4em;
+    line-height: 1.5em;
     padding: .6em;
     letter-spacing: .05em;
     /* background-color: green; */
 }
 
 .teachers-cart__courses {
-    background-color: #acacac;
+    background-color: rgb(105, 105, 114);
     border-radius: 7px;
     grid-column: span 3;
 }
