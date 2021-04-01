@@ -1,46 +1,182 @@
 .main {
-    background-image: url('../backgrounds/back_2.jpg');
-    background-repeat: no-repeat;
-    /* background-position: center; */
-    background-size: cover;
-    height: 100vh;
     letter-spacing: .15em;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
-    grid-template-rows: auto 3fr 1fr 1fr;
-    grid-row-gap: 1em
+    grid-template-rows: 10vh auto repeat(auto-fill, 70vh);
+    grid-row-gap: 1em;
+    margin: 5vh 0 0 0;
 }
 
-.logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.7rem;
-    padding: .3em 0 0 1.5em;
-    letter-spacing: .1em;
-    /* background-color: green; */
+.main__header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 3vh;
+    letter-spacing: .08em;
+}
+
+.main__description {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    letter-spacing: .08em;
+    font-weight: 300;
+}
+
+.main__tagline {
+    background-image: url('../backgrounds/back_2.jpg');
+    background-color: rgb(105, 105, 114);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    width: 100vw;
     grid-column: 1 / -1;
-}
-
-.main_tagline {
-    grid-column: 2 / 3;
     grid-row: 2 / 3;
-    justify-self: start;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.main_tagline p {
+.main__tagline p {
     font-family: 'Playfair Display', serif;
     font-size: 3.2em;
     line-height: 1.6em;
     margin: .5em 0;
+    width: 60%;
+    color: rgb(207, 205, 205);
+    text-shadow: 7px 7px 20px black;
 }
 
-.main_tagline span {
-    font-size: .45em;
+.main__tagline p:last-child {
     display: block;
     text-align: right;
+    font-size: 1.5em;
 }
 
-.main__button {
+.main__advantages {
+    min-height: 50vh;
+    width: 80%;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, .8fr));
+    grid-template-rows: repeat(auto-fill, minmax(550px, 1fr));
+    grid-gap: 5em;
+    justify-content: center;
+    margin: 20vh auto 10vh auto;
+}
+
+.main__advantages div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main__advantages i {
+    margin: 8% 0;
+    font-size: 5em;
+}
+
+.main__instructors {
+    /* background-color: brown; */
+    min-height: 70vh;
+    width: 80%;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    margin: 10vh auto;
+}
+
+.main__instructors h1 {
+    margin: 2% 0 2%;
+}
+
+.main__instructors-list h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    letter-spacing: .15em;
+    padding: .5em;
+}
+
+.main__instructors-list {
+    margin: 5vh 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, .6fr));
+    grid-template-rows: repeat(auto-fill, minmax(650px, 1fr));
+    grid-gap: 5em;
+    justify-content: center;
+}
+
+.main__instructor-item {
+    background-color: rgb(105, 105, 114);
+    margin: 5vh 0;
+    box-shadow: 9px 9px 10px 3px #acacac;
+}
+
+.main__instructor-item-container {
+    display: grid;
+    grid-template-columns: 35% 10% 55%;
+    grid-template-rows: auto;
+}
+
+.main__instructor-img {
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    filter: grayscale(100%);
+}
+
+.main__instructor-name {
+    grid-column: 2 / -1;
+    grid-row: 1 / 1;
+    z-index: 10;
+    font-size: .5rem;
+    color: rgb(207, 205, 205);
+    text-shadow: 7px 7px 20px black;
+}
+
+.main__instructor-testimonial {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    word-spacing: .15em;
+    margin-top: 1em;
+    padding: .5em;
+}
+.main__students {
+    background-color: purple;
+    min-height: 70vh;
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    margin: 10vh auto;
+}
+
+.main__fourth {
+    background-color: grey;
+    min-height: 70vh;
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+    margin: 10vh auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .main__button {
     border-radius: 6%;
     border: none;
     background-color: rgb(105, 105, 114);
@@ -60,17 +196,5 @@
     color: black;
     padding: 1em;
     text-decoration: none;
-}
+} */
 
-section {
-    min-height: 90vh;
-    width: 80%;
-    margin: 15vh auto 0;
-}
-
-section h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 3vh;
-    letter-spacing: .08em;
-}
