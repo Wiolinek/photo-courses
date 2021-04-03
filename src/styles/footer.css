@@ -6,6 +6,10 @@ footer {
     justify-content: center;
 }
 
+footer a {
+    color: black;
+}
+
 footer i {
     font-size: 30px;
     padding: .1em 2em;
