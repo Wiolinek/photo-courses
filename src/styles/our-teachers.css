@@ -62,7 +62,7 @@
 .teachers-cart__courses-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, .6fr));
-    grid-template-rows: repeat(auto-fill, minmax(550px, 1fr));
+    grid-auto-rows: 500px;
     grid-gap: 3em;
     justify-content: center;
 }
