@@ -4,7 +4,8 @@
     grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 10vh auto repeat(auto-fill, 70vh);
     grid-row-gap: 1em;
-    margin: 5vh 0 0 0;
+    justify-content: center;
+    margin: 5vh auto 0 auto;
 }
 
 .main__header {
@@ -29,7 +30,7 @@
     background-position: center;
     background-size: cover;
     min-height: 80vh;
-    width: 100vw;
+    width: 100%;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     display: flex;
@@ -55,19 +56,23 @@
 }
 
 .main__advantages {
+    background-color: brown;
     min-height: 50vh;
     width: 80%;
     grid-column: 1 / -1;
     grid-row: 3 / 4;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, .8fr));
-    grid-template-rows: repeat(auto-fill, minmax(550px, 1fr));
-    grid-gap: 5em;
+    grid-template-columns: repeat(auto-fit, minmax(350px, .8fr));
+    grid-auto-rows: 450px;
     justify-content: center;
+    /* text-align: center; */
+    grid-gap: 5em;
+    /* margin: 10vh auto; */
     margin: 20vh auto 10vh auto;
 }
 
 .main__advantages div {
+    background-color: green;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -104,7 +109,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, .6fr));
-    grid-template-rows: repeat(auto-fill, minmax(650px, 1fr));
+    grid-auto-rows: minmax(600px, 800px);
     grid-gap: 5em;
     justify-content: center;
 }
