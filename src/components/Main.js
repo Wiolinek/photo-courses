@@ -22,17 +22,17 @@ const Main = ( {teachers} ) => {
         {/* <button className='main__button' type="button"><NavLink to="/about-us">Check</NavLink></button> */}
         <div className='main__advantages'>
           <div>
-            <i class="fas fa-glasses"></i>
+            <i className="fas fa-glasses"></i>
             <h1 className='main__header'>Learn your way</h1>
             <p className='main__description'>Choose from our vast offer of on-line and stacionary classes.</p>
           </div>
           <div>
-            <i class="fas fa-hourglass-start"></i>
+            <i className="fas fa-hourglass-start"></i>
             <h1 className='main__header'>Set your own pace</h1>
             <p className='main__description'>Thanks to our great on-line courses you can learn whenever and wherever you want.</p>
           </div>
           <div>
-            <i class="fas fa-graduation-cap"></i>
+            <i className="fas fa-graduation-cap"></i>
             <h1 className='main__header'>Build up your skills</h1>
             <p className='main__description'>Search our offer and find course fit to your interests.</p>
           </div>

@@ -17,12 +17,21 @@ import './app.css';
 const App = () => {
 
   const [teachers, setTeachers] = useState([]);
+  const [courses, setCourses] = useState([]);
+  
 
   useEffect(() => {
     fetch(`http://localhost:3030/teachers`)
     .then(response => response.json())
     .then(result => setTeachers(result))
     .catch(error => console.log(`error ${error}`))
+  }, []);
+
+  useEffect(() => {
+      fetch(`http://localhost:3030/courses`)
+      .then(response => response.json())
+      .then(result => setCourses(result))
+      .catch(error => console.log(`error ${error}`))
   }, []);
 
 
@@ -38,10 +47,10 @@ const App = () => {
           <AboutUs/>
       </Route>
       <Route path="/our-teachers" component={OurTeachers}>
-          <OurTeachers teachers={teachers} />
+          <OurTeachers teachers={teachers} courses={courses}/>
       </Route>
       <Route path="/our-courses" component={OurCourses}>
-          <OurCourses/>
+          <OurCourses courses={courses}/>
       </Route>
       <Route path="/contact" component={Contact}>
           <Contact/>

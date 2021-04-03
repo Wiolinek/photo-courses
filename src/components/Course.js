@@ -5,8 +5,6 @@ import '../styles/course.css';
 
 const Course = ( {course} ) => {
 
-
-
     return (
         <li className='course-cart' style={{ backgroundImage: `url(${course.photo})` }}>
             <div className='course-cart__basic-info'>

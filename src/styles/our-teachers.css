@@ -1,10 +1,12 @@
-.teachers {
-}
-
 .teachers__list {
     margin: 10vh 0;
 }
 
+.teachers-cart {
+    width: 90%;
+    margin-bottom: 8em;
+}
+    
 .teachers__intro {
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
@@ -14,34 +16,27 @@
     padding: 0 .5em;
 }
 
-.teachers-cart {
-    width: 90%;
+.teachers-cart__details {
     display: grid;
-    grid-template-columns: 30% 3fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 2vh 1vw;
     margin: 10vh 0;
     /* background-color: pink; */
+    grid-template-columns: repeat(auto-fit, minmax(400px, .7fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 4em;
+    justify-content: center;
 }
 
 .teachers-cart__img {
-    width: 100%;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    width: 90%;
+    margin: 0 auto;
     box-shadow: 9px 9px 10px 3px #acacac;
-}
-
-.teachers-cart__info {
-    /* background-color: yellow; */
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
 }
 
 .teachers-cart__name {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     letter-spacing: .15em;
-    padding: .5em;
+    padding: .5em 0;
     border-bottom: 5px solid black;
 }
 
@@ -54,13 +49,10 @@
     /* background-color: green; */
 }
 
-.teachers-cart__courses {
+.teachers-cart__courses h3 {
     background-color: rgb(105, 105, 114);
     border-radius: 7px;
-    grid-column: span 3;
-}
-
-.teachers-cart__courses h3 {
+    margin-bottom: 1.5em;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
     padding: .5em;
@@ -68,6 +60,9 @@
 }
 
 .teachers-cart__courses-list {
-    list-style: none;
-    font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, .6fr));
+    grid-template-rows: repeat(auto-fill, minmax(550px, 1fr));
+    grid-gap: 3em;
+    justify-content: center;
 }

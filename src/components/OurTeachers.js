@@ -3,22 +3,23 @@ import Course from './Course';
 import '../styles/our-teachers.css';
 
 
-const OurTeachers = ( {teachers}) => {
+const OurTeachers = ( {teachers, courses}) => {
 
+    teachers = teachers.map(teacher => ({...teacher, teacher_courses: teacher.teacher_courses.split(',').map(item => parseInt(item))}));
 
     let teachersList = teachers.map(teacher =>
         <div key={teacher.id} className='teachers-cart'>
-            <img src={teacher.photo} alt={teacher.teacher_name} className='teachers-cart__img'></img>
-            <div className='teachers-cart__info'>
-                <h2 className='teachers-cart__name'>{teacher.teacher_name}</h2>
-                <p className='teachers-cart__desc'>{teacher.description}</p>
+            <div className='teachers-cart__details'>
+                <img src={teacher.photo} alt={teacher.teacher_name} className='teachers-cart__img'></img>
+                <div className='teachers-cart__info'>
+                    <h2 className='teachers-cart__name'>{teacher.teacher_name}</h2>
+                    <p className='teachers-cart__desc'>{teacher.description}</p>
+                </div>
             </div>
             <div className='teachers-cart__courses'>
                 <h3>Upcomming courses</h3>
                 <ul className='teachers-cart__courses-list'>
-                    {/* <Course />
-                    <Course />
-                    <Course /> */}
+                    {teachers && courses && teacher.teacher_courses.map(teacher_course => courses.map(course => teacher_course === course.id && <Course key={course.id} course={course}/>))}
                 </ul>
             </div>  
         </div>
