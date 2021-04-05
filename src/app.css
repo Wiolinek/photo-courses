@@ -9,6 +9,7 @@ section {
     min-height: 90vh;
     width: 80%;
     margin: 15vh auto 0;
+    position: relative;
 }
 
 section h1 {
@@ -16,7 +17,7 @@ section h1 {
     font-size: 2.5em;
     margin-bottom: 3vh;
     letter-spacing: .08em;
-    padding: 0 .4em;
+    /* padding: 0 .4em; */
 }
 
 .logo {
@@ -33,4 +34,10 @@ section h1 {
     padding: .3em 0 0 .5em;
     text-decoration: none;
     color: black;
+}
+
+.section-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

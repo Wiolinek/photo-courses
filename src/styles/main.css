@@ -56,7 +56,7 @@
 }
 
 .main__advantages {
-    background-color: brown;
+    /* background-color: brown; */
     min-height: 50vh;
     width: 80%;
     grid-column: 1 / -1;
@@ -72,16 +72,23 @@
 }
 
 .main__advantages div {
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
+    position: relative;
 }
 
 .main__advantages i {
     margin: 8% 0;
     font-size: 5em;
+}
+
+.main__advantages svg {
+    position: absolute;
+    top: 5%;
+    left: 40%;
 }
 
 .main__instructors {
