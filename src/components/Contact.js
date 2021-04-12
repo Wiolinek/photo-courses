@@ -57,6 +57,7 @@ const Contact = () => {
                     <Map lat={latHamburg} lng={lngHamburg}/>
                 </div>
             </article>
+            <p className='contact__intro'>Or leave us your message:</p>
             <form className='contact__form'>
                 <label>Name<br/><input type="text" name="name"></input></label>
                 <label>Email<br/><input type="email" name="mail"></input></label>
