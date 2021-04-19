@@ -1,0 +1,79 @@
+.cart__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    padding-bottom: .5em;
+    margin: 1em 0;
+    border-bottom: 1px solid black;
+}
+
+.cart__item-name {
+    width: 63%;
+}
+
+.cart__quantity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 16%;
+}
+
+.cart__price {
+    width: 14%;
+    text-align: center;
+}
+
+.cart__menu-remove {
+    width: 7%;
+    text-align: center;
+}
+
+.cart__list {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    letter-spacing: .02em;
+    word-spacing: .15em;
+    font-weight: 300;
+    min-height: 30vh;
+}
+
+.cart__btn {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    letter-spacing: .3em;
+    color: black;
+    padding: .2em .4em;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(105, 105, 114);
+    outline: none;
+    cursor: pointer;
+}
+
+.cart__btn--large {
+    width: 35%;
+    font-size: 1.1em;
+    padding: .6em;
+    text-decoration: none;
+}
+
+.cart__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 1em 0;
+}
+
+.cart__btn--section {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
