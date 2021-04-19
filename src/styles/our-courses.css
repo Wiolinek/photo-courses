@@ -8,11 +8,30 @@
 }
 
 .courses__filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Dosis', sans-serif;
     min-height: 10vh;
-    font-size: 2em;
     background-color: rgb(105, 105, 114);
     margin-top: 5vh;
+    border-radius: 6px;
 }
+
+.courses__filters label {
+    font-size: 1.5em;
+    font-family: 'Dosis', sans-serif;
+}
+
+.courses__filters select {
+    margin-left: 1em;
+}
+
+.courses__filters option {
+    font-size: 1.2em;
+    font-family: 'Dosis', sans-serif;
+}
+
 .courses__list {
     list-style: none;
     display: grid;
