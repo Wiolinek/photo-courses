@@ -1,5 +1,7 @@
 import Gallery from './Gallery';
 
+import { NavLink } from "react-router-dom";
+
 import '../styles/main.css';
 
 
@@ -21,7 +23,6 @@ const Main = ( {teachers} ) => {
         <div className="main__tagline">
           <p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… <br/>It remembers little things, long after you have forgotten everything.”</p>
           <p>— Aaron Siskind —</p></div>
-        {/* <button className='main__button' type="button"><NavLink to="/about-us">Check</NavLink></button> */}
         <div className="main__advantages">
           <div>
             <i className="fas fa-glasses"></i>
@@ -52,15 +53,27 @@ const Main = ( {teachers} ) => {
           <h1 className="main__header">The best photography instructors on your demand</h1>
           <p className="main__description">Great awards winners and world-renowned photographers. Meet them and pick your future photography master.</p>
           <ul className="main__instructors-list">{teachersOpinions}</ul>
+          <div className="main__learn-more">
+            <p>Learn more about our teachers</p>
+            <NavLink to="/our-teachers">
+              <svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="62" height="62" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="2.5"><path d="M22 6 L30 16 22 26 M30 16 L2 16" /></svg>
+            </NavLink>
+          </div>
         </div>
         <div className="main__students">
           <h1 className="main__header">Our students' work</h1>
           <p className="main__description">Check what a great work was made by our students. You can be one of them!</p>
           <Gallery />
+          <div className="main__learn-more">
+            <p>Find a perfect course for you</p>
+            <NavLink to="/our-courses">
+              <svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="62" height="62" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="2.5"><path d="M22 6 L30 16 22 26 M30 16 L2 16" /></svg>
+            </NavLink>
+          </div>
         </div>
-        <div className="main__fourth">
-          <h1 className="main__header">You didn't find what you need?</h1>
-          <p className="main__description">Leave us a message and we will design a course tailored to your expectations.</p>
+        <div className="main__tagline main__tagline--bottom">
+          <p>“Don’t shoot what it looks like. Shoot what it feels like.”</p>
+          <p>— David Alan Harvey —</p>
         </div>
       </main>
   );

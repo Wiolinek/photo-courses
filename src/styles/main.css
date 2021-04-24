@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 10vh auto repeat(auto-fill, 70vh);
-    grid-row-gap: 1em;
+    /* grid-row-gap: 1em; */
     justify-content: center;
     margin: 5vh auto 0 auto;
 }
@@ -56,7 +56,6 @@
 }
 
 .main__advantages {
-    /* background-color: brown; */
     min-height: 50vh;
     width: 80%;
     grid-column: 1 / -1;
@@ -65,14 +64,11 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, .8fr));
     grid-auto-rows: 450px;
     justify-content: center;
-    /* text-align: center; */
-    grid-gap: 5em;
-    /* margin: 10vh auto; */
-    margin: 20vh auto 10vh auto;
+    grid-column-gap: 5em;
+    margin: 20vh auto 8vh auto;
 }
 
 .main__advantages div {
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -92,12 +88,11 @@
 }
 
 .main__instructors {
-    /* background-color: brown; */
     min-height: 70vh;
     width: 80%;
     grid-column: 1 / -1;
     grid-row: 4 / 5;
-    margin: 10vh auto;
+    margin: 8vh auto;
 }
 
 .main__instructors h1 {
@@ -112,18 +107,18 @@
 }
 
 .main__instructors-list {
-    margin: 5vh 0;
+    margin: 7vh;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, .6fr));
-    grid-auto-rows: minmax(600px, 800px);
+    grid-auto-rows: minmax(400px, 720px);
     grid-gap: 5em;
     justify-content: center;
 }
 
 .main__instructor-item {
     background-color: rgb(105, 105, 114);
-    margin: 5vh 0;
+    /* margin: 5vh 0; */
     box-shadow: 9px 9px 10px 3px #acacac;
     border-radius: 6px;
 }
@@ -166,15 +161,40 @@
     grid-column: 1 / -1;
     grid-row: 5 / 6;
     width: 80%;
-    margin: 10vh auto;
+    margin: 8vh auto;
 }
 
-.main__fourth {
+.main__learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main__learn-more svg {
+    margin: .5em 2em .5em 2em;
+    color: black;
+}
+
+.main__learn-more p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .3em;
+    color: black;
+}
+
+.main__tagline--bottom {
+    background-image: url('../backgrounds/back_7.jpg');
     background-color: grey;
-    min-height: 40vh;
+    background-blend-mode: screen;
+    min-height: 45vh;
     grid-column: 1 / -1;
     grid-row: 6 / 7;
-    margin: 10vh auto;
+    margin: 8vh auto 0;
+}
+
+.main__tagline--bottom p {
+    color: black;
+    text-shadow: 7px 7px 20px rgb(207, 205, 205);
 }
 
 
