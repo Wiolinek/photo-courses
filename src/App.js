@@ -50,7 +50,7 @@ const App = () => {
           <OurTeachers teachers={teachers} courses={courses}/>
       </Route>
       <Route path="/our-courses" component={OurCourses}>
-          <OurCourses courses={courses}/>
+          <OurCourses teachers={teachers} courses={courses}/>
       </Route>
       <Route path="/contact" component={Contact}>
           <Contact/>

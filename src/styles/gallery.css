@@ -89,7 +89,7 @@
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     position: relative;
-    margin-top: 4em }
+    margin: 7vh 0 }
     .image-gallery.fullscreen-modal {
       background: #000;
       bottom: 0;

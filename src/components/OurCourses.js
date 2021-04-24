@@ -1,13 +1,37 @@
+import { NavLink } from "react-router-dom";
+
 import '../styles/our-courses.css';
 
 import Course from './Course';
 
 
-const OurCourses = ({ courses }) => {
+const OurCourses = ({ teachers, courses }) => {
 
-    let coursesList = courses.map(course =>
+    const removeDuplicates = (filtersArray) => {
+        return [...new Set(filtersArray)]
+    }
+    
+    const levelsList = removeDuplicates(courses.map(course => course.level))
+
+    const filterLevels = ["All", ...levelsList].map(level => 
+        <option key={level} value="level">{level}</option>)
+
+
+    const teachersList = removeDuplicates(teachers.map(teacher => teacher.teacher_name))
+    
+    const filterTeachers = ["All", ...teachersList].map(teacher =>
+        <option key={teacher} value="teacher">{teacher}</option>)
+
+
+    const locationsList = removeDuplicates(courses.map(course => course.place))
+    
+    const filterLocations = ["All", ...locationsList].map(location =>
+        <option key={location} value="location">{location}</option>)
+
+    const coursesList = courses.map(course =>
         <Course key={course.id} course={course}/>
     )
+
 
     return (
         <section className="courses">
@@ -21,31 +45,34 @@ const OurCourses = ({ courses }) => {
                 <svg id="i-filter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="60" height="60" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 5 C2 5 6 3 16 3 26 3 30 5 30 5 L19 18 19 27 13 30 13 18 2 5Z" /></svg>
                 <label>Teachers:
                     <select name="teachers">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
+                        {filterTeachers}
                     </select>
                 </label>
                 <label>Course level:
                     <select name="course level">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
+                        {filterLevels}
                     </select>
                 </label>
                 <label>Location:
                     <select name="location">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
+                        {filterLocations}
                     </select> 
                 </label>
             </div>
             {coursesList.length ? 
             <ul className="courses__list">{coursesList}</ul> : null}
+            <div className="courses-contact">
+                <h1 className="courses-contact__header">You didn't find what you need?</h1>
+                <div>
+                    <p className="courses-contact__description">We can design a course tailored to your expectations.</p>
+                    <div className="courses-contact__link">
+                        <p>Leave us a message</p>
+                        <NavLink to="/contact">
+                            <svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="62" height="62" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="2.5"><path d="M22 6 L30 16 22 26 M30 16 L2 16" /></svg>
+                        </NavLink>
+                    </div>
+                </div>
+            </div>
         </section>
     )
 

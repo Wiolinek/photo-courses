@@ -45,3 +45,43 @@
 .course-cart {
     min-height: 50vh;
 }
+
+.courses-contact {
+    min-height: 10vh;
+    background-color: rgb(105, 105, 114);
+    margin-bottom: 10vh;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.courses-contact__header {
+    margin-bottom: 3vh;
+    padding: .3em 0 0 .8em;
+}
+
+.courses-contact svg {
+    margin: .5em 2em .5em 2em;
+    color: black;
+}
+
+.courses-contact__description {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    letter-spacing: .08em;
+    font-weight: 300;
+    padding: 0 0 0 1em;
+}
+
+.courses-contact__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.courses-contact__link p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .3em;
+}

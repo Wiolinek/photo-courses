@@ -5,9 +5,6 @@ import ImageGallery from 'react-image-gallery';
 import '../styles/gallery.css';
 
 
-// import '../styles/about-us.css';
-
-
 const Gallery = () => {
 
 const [gallery, setGallery] = useState([]);
@@ -22,7 +19,7 @@ const [gallery, setGallery] = useState([]);
 
   return (
       <>
-        <ImageGallery items={gallery} />
+        <ImageGallery autoPlay={true} items={gallery}/>
       </>
   ) 
 }
