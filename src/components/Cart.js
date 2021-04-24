@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { decrease, increase, deleteFromCart } from '../redux/cartSlice';
+import { increaseQuantity, decreaseQuantity, deleteFromCart } from '../redux/cartSlice';
 
 import { NavLink } from "react-router-dom";
 
@@ -16,9 +16,9 @@ const Cart = () => {
         <li key={course.id} className="cart__item">
             <p className="cart__item-name">{course.name}</p>
             <div className="cart__quantity">
-                <button className="cart__btn" onClick={() => dispatch(decrease(course))}><svg id="i-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 16 L30 16" /></svg></button>
+                <button className="cart__btn" onClick={() => dispatch(decreaseQuantity(course))}><svg id="i-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 16 L30 16" /></svg></button>
                 <p>{course.quantity}</p>
-                <button className="cart__btn" onClick={() => dispatch(increase(course))}><svg id="i-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M16 2 L16 30 M2 16 L30 16" /></svg></button>
+                <button className="cart__btn" onClick={() => dispatch(increaseQuantity(course))}><svg id="i-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M16 2 L16 30 M2 16 L30 16" /></svg></button>
             </div>
             <p className="cart__price">{course.price} EUR</p>
             <div className="cart__menu-remove">

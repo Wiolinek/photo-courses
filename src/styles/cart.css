@@ -1,3 +1,7 @@
+.cart h1 {
+    margin-bottom: 5vh;
+}
+
 .cart__menu {
     display: flex;
     justify-content: space-between;
