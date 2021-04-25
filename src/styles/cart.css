@@ -1,20 +1,28 @@
+.cart {
+    /* background-color: lightblue; */
+}
+
 .cart h1 {
     margin-bottom: 5vh;
 }
 
 .cart__menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     font-family: 'Oswald', sans-serif;
-    list-style: none;
     padding-bottom: .5em;
     margin: 1em 0;
     border-bottom: 1px solid black;
+    letter-spacing: .02em;
 }
 
 .cart__item-name {
     width: 63%;
+}
+
+.cart__item p, .cart__menu p, .cart__total-price {
+    font-size: 1.2em;
 }
 
 .cart__quantity {
@@ -22,11 +30,17 @@
     justify-content: space-around;
     align-items: center;
     width: 16%;
+    padding: .2em .4em;
+}
+
+.cart__quantity p {
+    padding: .2em .4em;
 }
 
 .cart__price {
     width: 14%;
     text-align: center;
+    padding: .2em .4em;
 }
 
 .cart__menu-remove {
@@ -36,7 +50,6 @@
 
 .cart__list {
     font-family: 'Oswald', sans-serif;
-    font-size: 2em;
     letter-spacing: .02em;
     word-spacing: .15em;
     font-weight: 300;
@@ -47,6 +60,7 @@
     display: flex;
     align-content: center;
     justify-content: space-around;
+    background-color: rgb(105, 105, 114);
     font-family: 'Oswald', sans-serif;
     font-size: 1em;
     letter-spacing: .3em;
@@ -55,9 +69,29 @@
     margin: 0 auto;
     border-radius: 6px;
     border: none;
-    background-color: rgb(105, 105, 114);
     outline: none;
     cursor: pointer;
+}
+
+.cart__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+    
+}
+
+.cart__total-price {
+    font-family: 'Oswald', sans-serif;
+    margin: 3em 0;
+    letter-spacing: .03em;
+}
+
+.cart__btn--section {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 10vh;
 }
 
 .cart__btn--large {
@@ -66,18 +100,3 @@
     padding: .6em;
     text-decoration: none;
 }
-
-.cart__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    margin: 1em 0;
-}
-
-.cart__btn--section {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-}
-
