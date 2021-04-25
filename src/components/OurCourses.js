@@ -4,29 +4,34 @@ import '../styles/our-courses.css';
 
 import Course from './Course';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { filterTeachers, filterLevels, filterLocations} from '../redux/coursesSlice';
 
-const OurCourses = ({ teachers, courses }) => {
 
-    const removeDuplicates = (filtersArray) => {
+const OurCourses = ({ teachersData }) => {
+
+    const { courses } = useSelector(state => state.courses);
+    const dispatch = useDispatch();
+
+    const removeDuplicates = filtersArray => {
         return [...new Set(filtersArray)]
     }
+
+    const createOption = table => {
+        return table.map(item => <option key={item} value={item}>{item}</option>)
+    }
+
+    const teachers = removeDuplicates(teachersData.map(teacher => teacher.teacher_name))
+    const teachersList = ["All", ...teachers];
+    const filterTeachersList = createOption(teachersList);
     
-    const levelsList = removeDuplicates(courses.map(course => course.level))
+    const levels = removeDuplicates(courses.map(course => course.level))
+    const levelsList = ["All", ...levels];
+    const filterLevelsList = createOption(levelsList);
 
-    const filterLevels = ["All", ...levelsList].map(level => 
-        <option key={level} value="level">{level}</option>)
-
-
-    const teachersList = removeDuplicates(teachers.map(teacher => teacher.teacher_name))
-    
-    const filterTeachers = ["All", ...teachersList].map(teacher =>
-        <option key={teacher} value="teacher">{teacher}</option>)
-
-
-    const locationsList = removeDuplicates(courses.map(course => course.place))
-    
-    const filterLocations = ["All", ...locationsList].map(location =>
-        <option key={location} value="location">{location}</option>)
+    const locations = removeDuplicates(courses.map(course => course.place))
+    const locationsList = ["All", ...locations]
+    const filterLocationsList = createOption(locationsList);
 
     const coursesList = courses.map(course =>
         <Course key={course.id} course={course}/>
@@ -44,18 +49,18 @@ const OurCourses = ({ teachers, courses }) => {
             <div className='courses__filters'>
                 <svg id="i-filter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="60" height="60" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 5 C2 5 6 3 16 3 26 3 30 5 30 5 L19 18 19 27 13 30 13 18 2 5Z" /></svg>
                 <label>Teachers:
-                    <select name="teachers">
-                        {filterTeachers}
+                    <select name="teachers" onChange={(e) => dispatch(filterTeachers(e.target.value))}>
+                        {filterTeachersList}
                     </select>
                 </label>
                 <label>Course level:
-                    <select name="course level">
-                        {filterLevels}
+                    <select name="course level" onChange={(e) => dispatch(filterLevels(e.target.value))}>
+                        {filterLevelsList}
                     </select>
                 </label>
                 <label>Location:
-                    <select name="location">
-                        {filterLocations}
+                    <select name="location" onChange={(e) => dispatch(filterLocations(e.target.value))}>
+                        {filterLocationsList}
                     </select> 
                 </label>
             </div>

@@ -20,11 +20,11 @@
 
 .courses__filters label {
     font-size: 1.5em;
-    font-family: 'Dosis', sans-serif;
 }
 
 .courses__filters select {
     margin-left: 1em;
+    outline: none;
 }
 
 .courses__filters option {
