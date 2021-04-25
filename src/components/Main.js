@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 import '../styles/main.css';
 
 
-const Main = ( {teachers} ) => {
+const Main = ( {teachersData} ) => {
   
-  const teachersOpinions = teachers.map(teacher =>
+  const teachersOpinions = teachersData.map(teacher =>
     <li key={teacher.id} className="main__instructor-item">
       <div className="main__instructor-item-container">
         <img src={teacher.photo} alt={teacher.teacher_name} className="main__instructor-img"></img>

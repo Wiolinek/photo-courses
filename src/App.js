@@ -11,34 +11,34 @@ import Main from './components/Main';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import { useDispatch } from 'react-redux';
+import { getCourses } from './redux/coursesSlice';
+
 import './app.css';
 
 
 const App = () => {
 
-  const [teachers, setTeachers] = useState([]);
-  const [courses, setCourses] = useState([]);
-  
+  const [teachersData, setTeachersData] = useState([]);
 
+  const dispatch = useDispatch();
+  
   useEffect(() => {
     fetch(`http://localhost:3030/teachers`)
     .then(response => response.json())
-    .then(result => setTeachers(result))
+    .then(result => setTeachersData(result))
     .catch(error => console.log(`error ${error}`))
   }, []);
 
   useEffect(() => {
-      fetch(`http://localhost:3030/courses`)
-      .then(response => response.json())
-      .then(result => setCourses(result))
-      .catch(error => console.log(`error ${error}`))
-  }, []);
-
+    dispatch(getCourses())
+  }, [dispatch]);
+  
 
   return (
     <Router>
       <Route path="/" exact component={Main}>
-        <Main teachers={teachers}/>
+        <Main teachersData={teachersData}/>
       </Route>
       <Route path="/" component={Navigation}>
           <Navigation/>
@@ -47,10 +47,10 @@ const App = () => {
           <AboutUs/>
       </Route>
       <Route path="/our-teachers" component={OurTeachers}>
-          <OurTeachers teachers={teachers} courses={courses}/>
+          <OurTeachers teachersData={teachersData}/>
       </Route>
       <Route path="/our-courses" component={OurCourses}>
-          <OurCourses teachers={teachers} courses={courses}/>
+          <OurCourses teachersData={teachersData}/>
       </Route>
       <Route path="/contact" component={Contact}>
           <Contact/>

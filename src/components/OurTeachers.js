@@ -1,13 +1,17 @@
 import Course from './Course';
 
+import { useSelector } from 'react-redux';
+
 import '../styles/our-teachers.css';
 
 
-const OurTeachers = ( {teachers, courses}) => {
+const OurTeachers = ( {teachersData}) => {
 
-    teachers = teachers.map(teacher => ({...teacher, teacher_courses: teacher.teacher_courses.split(',').map(item => parseInt(item))}));
+    const { courses } = useSelector(state => state.courses);
 
-    let teachersList = teachers.map(teacher =>
+    teachersData = teachersData.map(teacher => ({...teacher, teacher_courses: teacher.teacher_courses.split(',').map(item => parseInt(item))}));
+
+    let teachersList = teachersData.map(teacher =>
         <div key={teacher.id} className='teachers-cart'>
             <div className='teachers-cart__details'>
                 <img src={teacher.photo} alt={teacher.teacher_name} className='teachers-cart__img'></img>
@@ -19,7 +23,7 @@ const OurTeachers = ( {teachers, courses}) => {
             <div className='teachers-cart__courses'>
                 <h3>Upcomming courses</h3>
                 <ul className='teachers-cart__courses-list'>
-                    {teachers && courses && teacher.teacher_courses.map(teacher_course => courses.map(course => teacher_course === course.id && <Course key={course.id} course={course}/>))}
+                    {teachersData && courses && teacher.teacher_courses.map(teacher_course => courses.map(course => teacher_course === course.id && <Course key={course.id} course={course}/>))}
                 </ul>
             </div>  
         </div>
