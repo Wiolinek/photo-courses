@@ -8,15 +8,19 @@ import '../styles/course.css';
 const Course = ( {course} ) => {
 
     const dispatch = useDispatch();
-    
+
 
     return (
-        <li className="course-cart" style={{ backgroundImage: `url(${course.photo})` }}>
+        <li className="course-cart" style={{ backgroundImage: `url(${course.photo_course})` }}>
             <div className="course-cart__basic-info">
                 <h2 className="course-cart__name">{course.name}</h2>
-                <p className="course-cart__level">{course.level}</p>
+                <p className="course-cart__level">{course.level}</p> 
             </div>
             <div className="course-cart__detail-info">
+                <div className="course-cart__teacher">
+                    <svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="3"><path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" /></svg>
+                    <p>{course.teacher_name}</p>
+                </div>
                 <div className="course-cart__duration">
                     <svg id="i-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="3"><circle cx="16" cy="16" r="14" /><path d="M16 8 L16 16 20 20" /></svg>
                     <p>{course.duration}</p>
