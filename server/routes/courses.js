@@ -3,9 +3,8 @@ var router = express.Router();
 
 var mysql = require('./../lib/mysql')
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
-  mysql.query('SELECT * FROM courses', function(error, result, fields) {
+  mysql.query('SELECT name, level, duration, date, place, price, photo_course, course_id, teacher_name FROM courses LEFT JOIN courses_x_teachers ON courses.id = courses_x_teachers.course_id LEFT JOIN teachers ON courses_x_teachers.teacher_id = teachers.id', function(error, result, fields) {
     res.json(result);
   });
 });
