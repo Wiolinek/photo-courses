@@ -1,5 +1,7 @@
 .course-cart {
     background-size: cover;
+    background-color: grey;
+    background-blend-mode: screen;
     font-family: 'Dosis', sans-serif;
     display: flex;
     flex-direction: column;
@@ -13,12 +15,15 @@
     font-family: 'Oswald', sans-serif;
     font-size: 1.7em;
     letter-spacing: .03em;
+    text-shadow: 7px 7px 20px rgb(207, 205, 205);
 }
 
 .course-cart__level {
     font-size: 1.4em;
+    font-weight: 600;
     letter-spacing: .07em;
     margin-top: .4em;
+    text-shadow: 7px 7px 20px rgb(207, 205, 205);
 }
 
 .course-cart__duration, .course-cart__date, .course-cart__place, .course-cart__teacher {
@@ -34,6 +39,7 @@
     margin-left: .5em;
     align-self: center;
     font-weight: bold;
+    text-shadow: 7px 7px 20px rgb(207, 205, 205);
 }
 
 .course-cart__buy {
