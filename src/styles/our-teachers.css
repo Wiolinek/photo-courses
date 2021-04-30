@@ -1,5 +1,6 @@
 .teachers__list {
     margin: 10vh 0;
+    list-style: none;
 }
 
 .teachers-cart {

@@ -19,7 +19,7 @@ const [gallery, setGallery] = useState([]);
 
   return (
       <>
-        <ImageGallery autoPlay={true} items={gallery}/>
+        <ImageGallery alt={gallery.teacher_name} originalAlt={gallery.teacher_name} thumbnailAlt={gallery.teacher_name} autoPlay={true} items={gallery}/>
       </>
   ) 
 }
