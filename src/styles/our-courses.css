@@ -1,12 +1,3 @@
-.courses__intro {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2em;
-    letter-spacing: .02em;
-    word-spacing: .15em;
-    font-weight: 300;
-    padding: 0 .5em;
-}
-
 .courses__filters {
     display: flex;
     align-items: center;

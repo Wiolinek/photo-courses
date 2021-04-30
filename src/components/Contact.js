@@ -16,7 +16,7 @@ const Contact = () => {
             <path d="M161 70C161 108.66 129.66 140 91 140C52.3401 140 21 108.66 21 70C21 31.3401 52.3401 0 91 0C129.66 0 161 31.3401 161 70Z" fill="#FF0000" fillOpacity="0.25"/>
             <path d="M140 172C140 210.66 108.66 242 70 242C31.3401 242 1.64986e-06 210.66 1.64986e-06 172C1.64986e-06 133.34 31.3401 102 70 102C108.66 102 140 133.34 140 172Z" fill="#0202FF" fillOpacity="0.25"/><circle cx="170" cy="140" r="70" transform="rotate(-1.63957 170 140)" fill="#169216" fillOpacity="0.25"/>
             </svg>
-            <p className="contact__intro">We are at your service in two following locations:</p>
+            <p className="section-intro contact__section-intro">We are at your service in two following locations:</p>
             <article className="contact__container">
                 <div className="contact__details">
                     <p className="logo">photo passion</p>
@@ -58,14 +58,14 @@ const Contact = () => {
                 </div>
             </article>
             <article className="contact__container contact__container--message">
-                <div className="contact__message">
-                    <p className="contact__intro">Or leave us your message:</p>
+                <div>
+                    <p className="section-intro">Or leave us your message:</p>
                     <form className="contact__form">
                         <label>Name<br/><input type="text" name="name"></input></label>
                         <label>Email<br/><input type="email" name="mail"></input></label>
                         <label>Subject<br/><input type="text" name="subject"></input></label>
                         <label>Message<br/><textarea name="message" rows="6" cols="50"></textarea></label>
-                        <button className="contact__btn" type="submit"><svg className="contact__btn--svg" id="i-send" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 16 L30 2 16 30 12 20 Z M30 2 L12 20" /></svg>Send</button>
+                        <button className="contact__btn" type="submit"><svg id="i-send" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 16 L30 2 16 30 12 20 Z M30 2 L12 20" /></svg>Send</button>
                     </form>
                 </div>
                 <div className="contact__circle">
@@ -73,6 +73,7 @@ const Contact = () => {
                     <path d="M161 70C161 108.66 129.66 140 91 140C52.3401 140 21 108.66 21 70C21 31.3401 52.3401 0 91 0C129.66 0 161 31.3401 161 70Z" fill="#FF0000" fillOpacity="0.25"/>
                     <path d="M140 172C140 210.66 108.66 242 70 242C31.3401 242 1.64986e-06 210.66 1.64986e-06 172C1.64986e-06 133.34 31.3401 102 70 102C108.66 102 140 133.34 140 172Z" fill="#0202FF" fillOpacity="0.25"/><circle cx="170" cy="140" r="70" transform="rotate(-1.63957 170 140)" fill="#169216" fillOpacity="0.25"/>
                     </svg>
+                    <p className="section-intro">...our consultant will contact you as soon as possible</p>
                 </div>
             </article>
         </section>

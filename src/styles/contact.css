@@ -2,19 +2,14 @@
     font-family: 'Oswald', sans-serif;
 }
 
-.contact__intro {
-    font-size: 2em;
-    letter-spacing: .02em;
-    word-spacing: .15em;
-    font-weight: 300;
-    padding: 0 .5em;
+.contact__section-intro {
     margin-bottom: 3em;
 }
 
 .contact__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, .8fr));
-    /* grid-template-rows: repeat(auto-fill, minmax(270px, 1fr)); */
+    grid-template-rows: repeat(auto-fill, minmax(270px, 2fr));
     grid-auto-rows: 270px;
     grid-gap: 1em;
     margin: 3em 1em;
@@ -103,7 +98,7 @@
     cursor: pointer;
 }
 
-.contact__btn--svg {
+.contact__btn svg {
     margin-right: .7em;
 }
 
@@ -111,4 +106,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.contact__circle svg {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+}
+
+.contact__circle p {
+    margin: 3em 1em 3em 0;
+}
+
+.contact__section-intro {
+    margin-bottom: 3em;
 }
