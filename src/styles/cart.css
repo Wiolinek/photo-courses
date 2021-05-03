@@ -56,29 +56,11 @@
     min-height: 30vh;
 }
 
-.cart__btn {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    background-color: rgb(105, 105, 114);
-    font-family: 'Oswald', sans-serif;
-    font-size: 1em;
-    letter-spacing: .3em;
-    color: black;
-    padding: .2em .4em;
-    margin: 0 auto;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
 .cart__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1em 0;
-    
 }
 
 .cart__total-price {
@@ -94,9 +76,37 @@
     margin-bottom: 10vh;
 }
 
+.cart__btn {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 1em;
+    padding: .35em .45em;
+    margin: 0 auto;
+}
+
 .cart__btn--large {
     width: 35%;
-    font-size: 1.1em;
-    padding: .6em;
+    font-size: 1.2em;
+    padding: .5em .03em;
     text-decoration: none;
+}
+
+.cart__empty-cart-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10vh;
+}
+
+.cart__empty-cart-message p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .3em;
+    color: black;
+}
+
+.cart__empty-cart-message svg {
+    margin: .5em 11em .5em 2em;
+    color: black;
 }
