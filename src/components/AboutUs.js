@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 
 
 const AboutUs = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[])
 
     return (
         <section className='about-us'>

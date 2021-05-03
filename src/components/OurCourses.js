@@ -17,6 +17,10 @@ const OurCourses = () => {
     const dispatch = useDispatch();  
 
     useEffect(() => {
+        window.scrollTo(0,0);
+    },[])
+    
+    useEffect(() => {
         dispatch(getCourses())
         console.log('pobieram kursy z our courses')
     }, [dispatch]);    

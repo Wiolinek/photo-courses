@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { increaseQuantity, decreaseQuantity, deleteFromCart } from '../redux/cartSlice';
 
@@ -12,6 +13,10 @@ const Cart = () => {
     const { cart } = useSelector((state) => state.cart);
     const totalAmount = useSelector((state) => state.cart.totalAmount);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[])
 
     const coursesList = cart.map(course => 
         <li key={course.id} className="cart__item">

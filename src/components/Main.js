@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Gallery from './Gallery';
 
 import { NavLink } from "react-router-dom";
@@ -6,6 +7,10 @@ import '../styles/main.css';
 
 
 const Main = ( {teachersData} ) => {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[])
   
   const teachersOpinions = teachersData.map(teacher =>
     <li key={teacher.id} className="main__instructor-item">

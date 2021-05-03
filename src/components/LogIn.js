@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import '../styles/logIn.css';
 
 
 const LogIn = () => {
 
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [])
 
     return (
         <section className="login">

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../styles/contact.css';
 import Map from './Map';
 
@@ -8,6 +9,10 @@ const Contact = () => {
     const lngBerlin = 13.348808727264174;
     const latHamburg = 53.548712766408364;
     const lngHamburg = 9.945696156442432;
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[])
 
     return (
         <section className="contact">
