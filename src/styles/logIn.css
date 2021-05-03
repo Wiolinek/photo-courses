@@ -1,9 +1,10 @@
 .login {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, .8fr));
     grid-column-gap: 2em;
     grid-row-gap: 5em;
     margin-bottom: 10vh;
+    justify-content: center;
 }
 
 .login__section h1 {
@@ -40,4 +41,20 @@
     padding: .5em .3em;
     margin: 1em 0 .5em auto;
     align-self: center;
+}
+
+@media (max-width: 470px) {
+    .login {
+        grid-template-columns: repeat(auto-fit, minmax(400px, .7fr));
+        grid-row-gap: .5em;
+        margin-bottom: 2vh;
+    }
+}
+
+@media (max-width: 360px) {
+    .login {
+        grid-template-columns: repeat(auto-fit, minmax(300px, .7fr));
+        grid-row-gap: .1em;
+        margin-bottom: .5vh;
+    }
 }
