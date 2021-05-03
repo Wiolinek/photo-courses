@@ -7,12 +7,10 @@ import OurTeachers from './components/OurTeachers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
+import LogIn from './components/LogIn';
 import Main from './components/Main';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
-import { useDispatch } from 'react-redux';
-import { getCourses } from './redux/coursesSlice';
 
 import './app.css';
 
@@ -21,8 +19,6 @@ const App = () => {
 
   const [teachersData, setTeachersData] = useState([]);
 
-  const dispatch = useDispatch();
-  
   useEffect(() => {
     fetch(`http://localhost:3030/teachers`)
     .then(response => response.json())
@@ -30,21 +26,17 @@ const App = () => {
     .catch(error => console.log(`error ${error}`))
   }, []);
 
-  useEffect(() => {
-    dispatch(getCourses())
-  }, [dispatch]);
-  
 
   return (
     <Router>
+      <Route path="/" component={Navigation}>
+          <Navigation />
+      </Route>
       <Route path="/" exact component={Main}>
         <Main teachersData={teachersData}/>
       </Route>
-      <Route path="/" component={Navigation}>
-          <Navigation/>
-      </Route>
       <Route path="/about-us" component={AboutUs}>
-          <AboutUs/>
+          <AboutUs />
       </Route>
       <Route path="/our-teachers" component={OurTeachers}>
           <OurTeachers teachersData={teachersData}/>
@@ -53,13 +45,16 @@ const App = () => {
           <OurCourses teachersData={teachersData}/>
       </Route>
       <Route path="/contact" component={Contact}>
-          <Contact/>
+          <Contact />
       </Route>
       <Route path="/cart" component={Cart}>
-          <Cart/>
+          <Cart />
+      </Route>
+      <Route path="/login" component={LogIn}>
+          <LogIn />
       </Route>
       <Route path="/" component={Footer}>
-          <Footer/>
+          <Footer />
       </Route>
     </Router>
   );

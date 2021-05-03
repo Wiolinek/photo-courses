@@ -1,0 +1,43 @@
+.login {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-column-gap: 2em;
+    grid-row-gap: 5em;
+    margin-bottom: 10vh;
+}
+
+.login__section h1 {
+    text-align: center;
+}
+
+.login__form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    margin: 3em auto;
+    padding: 2em;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid black;
+}
+
+.login__form input {
+    font-weight: 300;
+    letter-spacing: .07em;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 1.5em;
+}
+
+.login__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2em;
+    padding: .5em .3em;
+    margin: 1em 0 .5em auto;
+    align-self: center;
+}
