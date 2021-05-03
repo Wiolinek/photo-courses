@@ -51,16 +51,8 @@
 }
 
 .course-cart__buy button {
-    font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
-    letter-spacing: .3em;
-    color: black;
-    padding: .6em 1.5em;
-    border-radius: 6%;
-    border: none;
-    background-color: rgb(105, 105, 114);
-    outline: none;
-    cursor: pointer;  
+    padding: .5em 1.5em; 
 }
 
 .course-cart__buy p {

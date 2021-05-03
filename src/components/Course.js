@@ -34,7 +34,7 @@ const Course = ( {course} ) => {
                     <p>{course.place}</p>
                 </div>
                 <div className="course-cart__buy">
-                    <button onClick={() => dispatch(addToCart(course))}>BUY</button>
+                    <button className="btn" onClick={() => dispatch(addToCart(course))}>BUY</button>
                     <p>{course.price} EUR</p>
                 </div>
             </div>
