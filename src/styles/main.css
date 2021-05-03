@@ -1,10 +1,5 @@
 .main {
     letter-spacing: .15em;
-    display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
-    grid-template-rows: 10vh auto repeat(auto-fill, 70vh);
-    /* grid-row-gap: 1em; */
-    justify-content: center;
     margin: 5vh auto 0 auto;
 }
 
@@ -56,24 +51,25 @@
 }
 
 .main__advantages {
-    min-height: 50vh;
-    width: 80%;
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
+    width: 95%;
+    margin: 15vh auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, .8fr));
-    grid-auto-rows: 450px;
-    justify-content: center;
-    grid-column-gap: 5em;
-    margin: 20vh auto 8vh auto;
+    grid-template-rows: repeat(auto-fit, minmax(400px, 2fr));
+    grid-gap: 4em;
 }
 
-.main__advantages div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
+.main__advantages--first, .main__advantages--second {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, .7fr));
+    grid-gap: 4em;
+    justify-content: center;
+}
+
+.main__advantages--first div, .main__advantages--second div {
+    width: 100%;
     position: relative;
+    text-align: center;
+    padding: 2em;
 }
 
 .main__advantages i {
@@ -87,16 +83,16 @@
     left: 40%;
 }
 
+.main__advantages .main__header, .main__advantages .main__description {
+    padding: 0 2em;
+}
+
 .main__instructors {
     min-height: 70vh;
     width: 80%;
     grid-column: 1 / -1;
     grid-row: 4 / 5;
     margin: 8vh auto;
-}
-
-.main__instructors h1 {
-    margin: 2% 0 2%;
 }
 
 .main__instructors-list h1 {
@@ -111,14 +107,13 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, .6fr));
-    grid-auto-rows: minmax(400px, 720px);
+    grid-auto-rows: minmax(320px, 700px);
     grid-gap: 5em;
     justify-content: center;
 }
 
 .main__instructor-item {
     background-color: rgb(105, 105, 114);
-    /* margin: 5vh 0; */
     box-shadow: 9px 9px 10px 3px #acacac;
     border-radius: 6px;
 }
@@ -155,8 +150,8 @@
     margin-top: 1em;
     padding: .5em;
 }
+
 .main__students {
-    /* background-color: purple; */
     min-height: 80vh;
     grid-column: 1 / -1;
     grid-row: 5 / 6;
@@ -198,25 +193,66 @@
 }
 
 
-/* .main__button {
-    border-radius: 6%;
-    border: none;
-    background-color: rgb(105, 105, 114);
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    justify-self: end;
-    align-self: center;
-    cursor: pointer;
-    outline: none;
+@media (max-width: 1450px) {
+    .main__instructor-testimonial {
+        font-size: 1.8em;
+    }
 }
 
-.main__button a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2em;
-    line-height: 2.2em;
-    letter-spacing: .2em;
-    color: black;
-    padding: 1em;
-    text-decoration: none;
-} */
+@media (max-width: 1360px) {
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 650px); 
+    }
+}
+
+@media (max-width: 1260px) {
+    .main__instructor-testimonial {
+        font-size: 1.8em;
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 630px); 
+    }
+}
+
+@media (max-width: 1160px) {
+    .main__instructor-testimonial {
+        font-size: 1.9em;
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 600px); 
+    }
+}
+
+@media (max-width: 800px) {
+    .main__instructor-testimonial {
+        font-size: 2em;
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 580px); 
+    }
+}
+
+@media (max-width: 550px) {
+    .main__instructor-testimonial {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 470px) {
+    .main__instructor-testimonial {
+        font-size: 2.3em;
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 540px); 
+    }
+}
+
+@media (max-width: 360px) {
+    .main__instructor-testimonial {
+        font-size: 2.4em;
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 500px); 
+    }
+}
 

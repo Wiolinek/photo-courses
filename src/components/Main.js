@@ -24,29 +24,41 @@ const Main = ( {teachersData} ) => {
           <p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… <br/>It remembers little things, long after you have forgotten everything.”</p>
           <p>— Aaron Siskind —</p></div>
         <div className="main__advantages">
-          <div>
-            <i className="fas fa-glasses"></i>
-            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#FF0000" fillOpacity="0.25"/>
+          <div className="main__advantages--first">
+            <div>
+              <i className="fas fa-glasses"></i>
+              <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#FF0000" fillOpacity="0.25"/>
+                </svg>
+              <h1 className="main__header">Learn your way</h1>
+              <p className="main__description">Choose from our vast offer of on-line and stacionary classes.</p>
+            </div>
+            <div>
+              <i className="fas fa-hourglass-start"></i>
+              <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#169216" fillOpacity="0.25"/>
               </svg>
-            <h1 className="main__header">Learn your way</h1>
-            <p className="main__description">Choose from our vast offer of on-line and stacionary classes.</p>
+              <h1 className="main__header">Set your own pace</h1>
+              <p className="main__description">Thanks to our great on-line courses you can learn whenever and wherever you want.</p>
+            </div>
           </div>
-          <div>
-            <i className="fas fa-hourglass-start"></i>
-            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#169216" fillOpacity="0.25"/>
-            </svg>
-            <h1 className="main__header">Set your own pace</h1>
-            <p className="main__description">Thanks to our great on-line courses you can learn whenever and wherever you want.</p>
-          </div>
-          <div>
-            <i className="fas fa-graduation-cap"></i>
-            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#0202FF" fillOpacity="0.25"/>
-            </svg>
-            <h1 className="main__header">Build up your skills</h1>
-            <p className="main__description">Search our offer and find course fit to your interests.</p>
+          <div className="main__advantages--second">
+            <div>
+              <i className="fas fa-graduation-cap"></i>
+              <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#0202FF" fillOpacity="0.25"/>
+              </svg>
+              <h1 className="main__header">Build up your skills</h1>
+              <p className="main__description">Search our offer and find course fit to your interests.</p>
+            </div>
+            <div>
+              <i class="fas fa-users"></i>
+              <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#FF0000" fillOpacity="0.25"/>
+              </svg>
+              <h1 className="main__header">Meet great people</h1>
+              <p className="main__description">Learn in small groups, work together, exchange experience and ideas.</p>
+            </div>
           </div>
         </div>
         <div className="main__instructors">
