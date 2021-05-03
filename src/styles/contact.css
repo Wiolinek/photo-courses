@@ -12,7 +12,7 @@
     grid-template-rows: repeat(auto-fill, minmax(270px, 2fr));
     grid-auto-rows: 270px;
     grid-gap: 1em;
-    margin: 3em 1em;
+    margin: 3em 1em 10vh;
 }
 
 .contact__details {
@@ -46,15 +46,14 @@
     display: inline-block;
 }
 
-.contact__container--message {
-    grid-auto-rows: auto;
+.contact__form-section {
+    margin-top: 3em;
 }
 
 .contact__form {
     width: 90%;
     display: flex;
     flex-direction: column;
-    border-radius: 6px;
     margin: 3em 0;
     padding: 1em;
 }
@@ -85,17 +84,9 @@
     align-items: center;
     justify-content: center;
     width: 40%;
-    font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
-    letter-spacing: .3em;
-    color: black;
-    padding: .35em .3em;
+    padding: .5em .3em;
     margin: 1em 0 .5em auto;
-    border-radius: 6px;
-    border: none;
-    background-color: rgb(105, 105, 114);
-    outline: none;
-    cursor: pointer;
 }
 
 .contact__btn svg {
@@ -117,8 +108,4 @@
 
 .contact__circle p {
     margin: 3em 1em 3em 0;
-}
-
-.contact__section-intro {
-    margin-bottom: 3em;
 }
