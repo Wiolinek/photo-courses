@@ -17,7 +17,7 @@ const OurTeachers = ( {teachersData}) => {
 
     useEffect(() => {
         dispatch(getCourses())
-    }, []);  
+    }, [dispatch]);  
 
     teachersData = teachersData.map(teacher => ({...teacher, teacher_courses: teacher.teacher_courses.split(',').map(item => parseInt(item))}));
     console.log(teachersData)
