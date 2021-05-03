@@ -3,7 +3,7 @@ footer {
     height: 7vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 footer a {
@@ -12,5 +12,4 @@ footer a {
 
 footer i {
     font-size: 1.9em;
-    padding: .1em 2em;
 }
