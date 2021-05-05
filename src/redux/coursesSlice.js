@@ -1,14 +1,33 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// import { persistReducer } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
+
 
 export const getCourses = createAsyncThunk(
   'courses/getCourses',
   async () => {
-    return fetch(`http://localhost:3030/courses`)
-      .then(response => response.json())
-      .catch(error => console.log(`error ${error}`))
+    const response = await fetch(`http://localhost:3030/courses`);
+    if (response.ok) {
+        const courses = await response.json();
+        return courses;
+    }
   }
+)
+
+export const getFilteredCourses = createAsyncThunk(
+    'courses/getFilteredCourses',
+    async (_, { getState }) => {
+      const { courses } = getState();
+      const response = await fetch(`http://localhost:3030/courses/filter`,
+      {method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({teacherFilter: courses.teacherFilter, levelFilter: courses.levelFilter, locationFilter: courses.locationFilter }),
+    });
+      if (response.ok) {
+          const filteredCourses = await response.json();
+          return filteredCourses;
+      }
+    }
 )
 
 const coursesSlice = createSlice({
@@ -16,45 +35,51 @@ const coursesSlice = createSlice({
   initialState: {
     courses: [],
     status: null,
-    teachersFilter: 'All',
+    teacherFilter: 'All',
     levelFilter: 'All',
     locationFilter: 'All',
+    filteredCourses: [],
   },
 
   reducers: {
-    filterTeachers: (state, { payload }) => {
-      state.teachersFilter = payload;
-    },
 
-    filterLevels: (state, { payload }) => {
-      state.levelFilter = payload;
-      state.courses = state.courses.filter(course => course.level === payload)
-    },
-
-    filterLocations: (state, { payload }) => {
-      state.locationFilter = payload;
-      state.courses = state.courses.filter(course => course.place === payload)
+    filterCourses: (state, { payload }) => {
+      state[payload.type] = payload.value;
     },
   },
 
   extraReducers: {
-    [getCourses.pending] : (state, action) => {
+
+    [getCourses.pending] : (state) => {
       state.status = 'loading';
     },
-    [getCourses.fulfilled] : (state, {payload}) => {
+
+    [getCourses.fulfilled] : (state, { payload }) => {
       state.status = 'completed';
       state.courses = payload;
+      state.filteredCourses = payload;
     },
-    [getCourses.rejected] : (state, {payload}) => {
+
+    [getCourses.rejected] : (state) => {
       state.status = 'failed';
-    }
+    },
+
+    [getFilteredCourses.fulfilled] : (state, { payload }) => {
+      state.filteredCourses = payload;
+    },
   }
 })
 
 // Action creators generated for each reducer function
-export const { filterTeachers, filterLevels, filterLocations } = coursesSlice.actions;
+export const { filterCourses } = coursesSlice.actions;
 
 const coursesReducer = coursesSlice.reducer;
+
+export const selectCourses = state => state.courses;
+export const selectFilteredCourses = state => state.courses.filteredCourses;
+export const selectTeacherFilter = state => state.courses.teacherFilter;
+export const selectLevelFilter = state => state.courses.levelFilter;
+export const selectLocationFilter = state => state.courses.locationFilter;
 
 // const persistConfig = {
 //     key: 'root',
