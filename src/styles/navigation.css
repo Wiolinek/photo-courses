@@ -25,9 +25,7 @@ nav .logo {
 
 .nav-menu-item {
     list-style: none;
-    /* background-color: red; */
     text-align: center;
-    /* border: 1px solid black; */
     align-self: center;
     padding: .3em;
 }
@@ -39,19 +37,22 @@ nav .logo {
     text-decoration: none;
     color: black;
     padding: .2em 1em;
-    /* background-color: rgb(105, 105, 105); */
+    border-bottom: 2px solid transparent;
+    transition: all .8s;
+}
+
+.nav-menu-item a:hover {
+    border-bottom: 2px solid black;
 }
 
 .nav-menu-icon {
     list-style: none;
-    /* background-color: red; */
     text-align: center;
     align-self: center;
     padding: .5em .2em .2em .2em;
 }
 
 .nav-menu-icon a {
-    /* background-color: yellow; */
     color: black;
     padding: .2em;
 }

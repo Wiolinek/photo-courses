@@ -10,7 +10,6 @@ const Navigation = () => {
 
     return (
         <nav>
-            {/* <div className='logo'></div> */}
             <div className='logo'><NavLink to="/">photo passion</NavLink></div>
             <ul className='nav-menu'>
                 <li className='nav-menu-item'><NavLink to="/about-us">About Us</NavLink></li>
