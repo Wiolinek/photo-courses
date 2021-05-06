@@ -1,36 +1,20 @@
-.courses__filters {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: 'Dosis', sans-serif;
-    min-height: 10vh;
-    background-color: rgb(105, 105, 114);
-    margin-top: 5vh;
-    border-radius: 6px;
-}
-
-.courses__filters label {
-    font-size: 1.5em;
-}
-
-.courses__filters select {
-    margin-left: 1em;
-    outline: none;
-}
-
-.courses__filters option {
-    font-size: 1.2em;
-    font-family: 'Dosis', sans-serif;
+.courses__section {
+    min-height: 40vh;
 }
 
 .courses__list {
-    list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, .6fr));
     grid-auto-rows: 500px;
     grid-gap: 5em;
+    min-height: 60vh;
     margin: 10vh 0;
     justify-content: center;
+    list-style: none;
+}
+
+.courses__no-result-message {
+    margin: 8vh 0 0 0;
 }
 
 .courses-contact {
@@ -53,7 +37,7 @@
     color: black;
 }
 
-.courses-contact__description {
+.courses-contact__description, .courses__no-result-message {
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
     letter-spacing: .08em;

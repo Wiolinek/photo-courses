@@ -1,0 +1,24 @@
+.courses__filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Dosis', sans-serif;
+    min-height: 10vh;
+    background-color: rgb(105, 105, 114);
+    margin-top: 5vh;
+    border-radius: 6px;
+}
+
+.courses__filters label {
+    font-size: 1.5em;
+}
+
+.courses__filters select {
+    margin-left: 1em;
+    outline: none;
+}
+
+.courses__filters option {
+    font-size: 1.2em;
+    font-family: 'Dosis', sans-serif;
+}

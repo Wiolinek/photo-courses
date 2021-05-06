@@ -4,17 +4,15 @@ import { useEffect } from "react";
 import '../styles/our-courses.css';
 
 import Course from './Course';
+import OurCoursesFilters from './OurCoursesFilters';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { filterCourses, selectFilteredCourses, selectTeacherFilter, selectLevelFilter, selectLocationFilter, getCourses, getFilteredCourses } from '../redux/coursesSlice';
+import { selectFilteredCourses, getCourses } from '../redux/coursesSlice';
 
 
 const OurCourses = () => {
 
     const filteredCourses = useSelector(selectFilteredCourses);
-    const teacherFilter = useSelector(selectTeacherFilter);
-    const levelFilter = useSelector(selectLevelFilter);
-    const locationFilter = useSelector(selectLocationFilter);
 
     const dispatch = useDispatch();  
 
@@ -25,31 +23,6 @@ const OurCourses = () => {
     useEffect(() => {
         dispatch(getCourses())
     }, [dispatch]);
-
-    const setFiltersHandler = (e) => {
-        dispatch(filterCourses({value: e.target.value, type: e.target.dataset.type}));
-        dispatch(getFilteredCourses({teacherFilter: teacherFilter, levelFilter: levelFilter, locationFilter: locationFilter}))
-    }
-
-    const removeDuplicates = filtersArray => {
-        return [...new Set(filtersArray)]
-    }
-
-    const createOption = table => {
-        return table.map(item => <option key={item} value={item}>{item}</option>)
-    }
-
-    const teachers = removeDuplicates(filteredCourses.map(teacher => teacher.teacher_name))
-    const teachersList = ["All", ...teachers];
-    const filterTeachersList = createOption(teachersList);
-    
-    const levels = removeDuplicates(filteredCourses.map(course => course.level))
-    const levelsList = ["All", ...levels];
-    const filterLevelsList = createOption(levelsList);
-
-    const locations = removeDuplicates(filteredCourses.map(course => course.place))
-    const locationsList = ["All", ...locations]
-    const filterLocationsList = createOption(locationsList);
 
     const coursesList = (filteredCourses.map(course =>
             <Course key={course.course_id} course={course}/>))
@@ -63,26 +36,11 @@ const OurCourses = () => {
             <path d="M140 172C140 210.66 108.66 242 70 242C31.3401 242 1.64986e-06 210.66 1.64986e-06 172C1.64986e-06 133.34 31.3401 102 70 102C108.66 102 140 133.34 140 172Z" fill="#0202FF" fillOpacity="0.25"/><circle cx="170" cy="140" r="70" transform="rotate(-1.63957 170 140)" fill="#169216" fillOpacity="0.25"/>
             </svg>
             <p className="section-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit ullam ex eos sunt cupiditate eligendi odit ratione obcaecati saepe non rerum voluptatibus harum commodi, delectus odio doloribus, recusandae deleniti fuga. Minus praesentium quidem nam quae error blanditiis nesciunt nostrum dolore. Ut quam nemo vero impedit est quod sit commodi, ad qui at inventore adipisci laborum labore fugiat dolore neque non pariatur id voluptas rem, deserunt quidem vitae! Esse, id reiciendis accusantium assumenda ipsa aliquid asperiores, voluptates quisquam iusto pariatur suscipit culpa sit laboriosam molestiae excepturi qui repellendus iste, quasi similique! Hic quaerat enim labore ullam nobis deleniti, ratione maiores soluta.</p>
-            <div className="courses__filters">
-                <svg id="i-filter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="60" height="60" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 5 C2 5 6 3 16 3 26 3 30 5 30 5 L19 18 19 27 13 30 13 18 2 5Z" /></svg>
-                <label>Teachers:
-                    <select name="teachers" data-type="teacherFilter" onChange={setFiltersHandler}>
-                        {filterTeachersList}
-                    </select>
-                </label>
-                <label>Course level:
-                    <select name="course level" data-type="levelFilter" onChange={setFiltersHandler}>
-                        {filterLevelsList}
-                    </select>
-                </label>
-                <label>Location:
-                    <select name="location" data-type="locationFilter" onChange={setFiltersHandler}>
-                        {filterLocationsList}
-                    </select> 
-                </label>
+            <OurCoursesFilters />
+            <div className="courses__section">
+                {coursesList.length ? 
+                <ul className="courses__list">{coursesList}</ul> : <div><p className="courses__no-result-message">We could not find anything...</p></div>}
             </div>
-            {coursesList.length ? 
-            <ul className="courses__list">{coursesList}</ul> : null}
             <div className="courses-contact">
                 <h1 className="courses-contact__header">You didn't find what you need?</h1>
                 <div>
