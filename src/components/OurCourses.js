@@ -7,7 +7,7 @@ import Course from './Course';
 import OurCoursesFilters from './OurCoursesFilters';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilteredCourses, getCourses } from '../redux/coursesSlice';
+import { selectFilteredCourses, getCourses, resetFilters } from '../redux/coursesSlice';
 
 
 const OurCourses = () => {
@@ -21,7 +21,8 @@ const OurCourses = () => {
     },[])
     
     useEffect(() => {
-        dispatch(getCourses())
+        dispatch(getCourses());
+        dispatch(resetFilters());
     }, [dispatch]);
 
     const coursesList = (filteredCourses.map(course =>
