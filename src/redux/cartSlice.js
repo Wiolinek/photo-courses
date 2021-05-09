@@ -67,6 +67,8 @@ export const cartSlice = createSlice({
 // Action creators generated for each reducer function
 export const { addToCart, deleteFromCart, increaseQuantity, decreaseQuantity } = cartSlice.actions;
 
+export const selectItemsQuantity = state => state.cart.itemsQuantity;
+
 const rootReducer = cartSlice.reducer;
 
 const persistConfig = {

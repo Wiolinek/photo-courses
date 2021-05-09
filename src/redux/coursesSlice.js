@@ -46,6 +46,12 @@ const coursesSlice = createSlice({
     filterCourses: (state, { payload }) => {
       state[payload.type] = payload.value;
     },
+
+    resetFilters: (state) => {
+      state.teacherFilter = 'All';
+      state.levelFilter = 'All';
+      state.locationFilter = 'All';
+    }
   },
 
   extraReducers: {
@@ -71,7 +77,7 @@ const coursesSlice = createSlice({
 })
 
 // Action creators generated for each reducer function
-export const { filterCourses } = coursesSlice.actions;
+export const { filterCourses, resetFilters } = coursesSlice.actions;
 
 const coursesReducer = coursesSlice.reducer;
 

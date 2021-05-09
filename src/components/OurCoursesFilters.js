@@ -1,21 +1,23 @@
-import '../styles/our-courses-filters.css';
-
 import { useSelector, useDispatch } from 'react-redux';
+
 import { filterCourses, selectCourses, selectTeacherFilter, selectLevelFilter, selectLocationFilter, getFilteredCourses } from '../redux/coursesSlice';
+
+import '../styles/our-courses-filters.css';
 
 
 const OurCoursesFilters = () => {
+
 
     const { courses } = useSelector(selectCourses);
     const teacherFilter = useSelector(selectTeacherFilter);
     const levelFilter = useSelector(selectLevelFilter);
     const locationFilter = useSelector(selectLocationFilter);
 
-    const dispatch = useDispatch();  
+    const dispatch = useDispatch();
 
     const setFiltersHandler = (e) => {
         dispatch(filterCourses({value: e.target.value, type: e.target.dataset.type}));
-        dispatch(getFilteredCourses({teacherFilter: teacherFilter, levelFilter: levelFilter, locationFilter: locationFilter}))
+        dispatch(getFilteredCourses({teacherFilter: teacherFilter, levelFilter: levelFilter, locationFilter: locationFilter}));
     }
 
     const removeDuplicates = filtersArray => {
