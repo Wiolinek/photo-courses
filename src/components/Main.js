@@ -57,7 +57,7 @@ const Main = ( {teachersData} ) => {
               <p className="main__description">Search our offer and find course fit to your interests.</p>
             </div>
             <div>
-              <i class="fas fa-users"></i>
+              <i className="fas fa-users"></i>
               <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M140 70C140 108.66 108.66 140 70 140C31.3401 140 0 108.66 0 70C0 31.3401 31.3401 0 70 0C108.66 0 140 31.3401 140 70Z" fill="#FF0000" fillOpacity="0.25"/>
               </svg>
