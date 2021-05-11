@@ -11,7 +11,7 @@ const Main = ( {teachersData} ) => {
   useEffect(() => {
     window.scrollTo(0,0);
   },[])
-  
+
   const teachersOpinions = teachersData.map(teacher =>
     <li key={teacher.id} className="main__instructor-item">
       <div className="main__instructor-item-container">
@@ -21,7 +21,6 @@ const Main = ( {teachersData} ) => {
       <p className="main__instructor-testimonial">{teacher.testimonial}</p>
     </li>
   )
-
 
   return (
       <main className="main">
