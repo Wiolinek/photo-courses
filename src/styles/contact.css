@@ -12,7 +12,7 @@
     grid-template-rows: repeat(auto-fill, minmax(270px, 2fr));
     grid-auto-rows: 270px;
     grid-gap: 1em;
-    margin: 3em 1em 10vh;
+    margin: 3vh 1em 10vh;
 }
 
 .contact__details {
