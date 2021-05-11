@@ -2,14 +2,20 @@
     margin-bottom: .8em;
 }
 
+.about-us ul {
+    margin: 10vh 1em 10vh;
+}
+
 .about-us__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, .7fr));
+    grid-template-columns: repeat(2, minmax(400px, .7fr));
     grid-template-rows: repeat(auto-fill, minmax(270px, 2fr));
     grid-auto-rows: 270px;
-    grid-gap: 1em;
+    grid-auto-columns: 270px;
+    grid-gap: 2em;
     align-items: center;
-    margin: 3em 1em 10vh;
+    justify-content: center;
+    margin: 10vh 0;
 }
 
 .about-us__img {
@@ -17,8 +23,38 @@
     margin: 0 auto;
     box-shadow: 9px 9px 10px 3px #acacac;
     border-radius: 6px;
+    grid-column: 2 / 3;
 }
 
 .about-us__list p {
-    padding: .5em;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5em;
+    padding: .6em;
+    letter-spacing: .05em;
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    border-bottom: 5px solid black;
+}
+
+.about-us__list:nth-child(even) .about-us__img {
+    grid-column: 1 / 2;
+}
+
+.about-us__list:nth-child(even) p {
+    grid-column: 2 / 3;
+}
+
+@media (max-width: 1360px) {
+    .about-us__list {
+        grid-template-columns: minmax(400px, .7fr);
+    }
+    .about-us__list p, .about-us__list:nth-child(even) p {
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+    }
+    .about-us__img, .about-us__list:nth-child(even) .about-us__img {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
 }

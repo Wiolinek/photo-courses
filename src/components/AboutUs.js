@@ -33,9 +33,9 @@ const AboutUs = () => {
             <path d="M140 172C140 210.66 108.66 242 70 242C31.3401 242 1.64986e-06 210.66 1.64986e-06 172C1.64986e-06 133.34 31.3401 102 70 102C108.66 102 140 133.34 140 172Z" fill="#0202FF" fillOpacity="0.25"/><circle cx="170" cy="140" r="70" transform="rotate(-1.63957 170 140)" fill="#169216" fillOpacity="0.25"/>
             </svg>
             <p className="section-intro about-us">We started making workshops and on line courses in 2010. Our main goal was to inspire and support people in developing their creative skills. We wanted to take a fresh approach to education and to give simple access to visionaries, leaders, and professionals who are doing the work.</p>
-            <div>
+            <ul>
                 {aboutUsList}
-            </div>
+            </ul>
         </section>
     )
     
