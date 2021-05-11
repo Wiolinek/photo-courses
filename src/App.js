@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Main from './components/Main';
 import Navigation from './components/Navigation';
 import AboutUs from './components/AboutUs';
 import OurCourses from './components/OurCourses';
@@ -7,8 +8,8 @@ import OurTeachers from './components/OurTeachers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import LogIn from './components/LogIn';
-import Main from './components/Main';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -47,8 +48,11 @@ const App = () => {
       <Route path="/contact" component={Contact}>
           <Contact />
       </Route>
-      <Route path="/cart" component={Cart}>
+      <Route path="/cart" exact component={Cart}>
           <Cart />
+      </Route>
+      <Route path="/cart/checkout" component={Checkout}>
+          <Checkout />
       </Route>
       <Route path="/login" component={LogIn}>
           <LogIn />

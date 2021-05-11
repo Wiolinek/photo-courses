@@ -66,10 +66,10 @@ const Contact = () => {
                 <div className="contact__form-section">
                     <p className="section-intro">Or leave us your message:</p>
                     <form className="contact__form">
-                        <label>Name<br/><input type="text" name="name"></input></label>
-                        <label>Email<br/><input type="email" name="mail"></input></label>
-                        <label>Subject<br/><input type="text" name="subject"></input></label>
-                        <label>Message<br/><textarea name="message" rows="6" cols="50"></textarea></label>
+                        <label>Name<br/><input type="text" name="name" required></input></label>
+                        <label>Email<br/><input type="email" name="mail" required></input></label>
+                        <label>Subject<br/><input type="text" name="subject" required></input></label>
+                        <label>Message<br/><textarea name="message" rows="6" cols="50" required></textarea></label>
                         <button className="btn contact__btn" type="submit"><svg id="i-send" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M2 16 L30 2 16 30 12 20 Z M30 2 L12 20" /></svg>Send</button>
                     </form>
                 </div>

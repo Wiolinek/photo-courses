@@ -1,0 +1,129 @@
+.checkout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, .8fr));
+    grid-column-gap: 2em;
+    grid-row-gap: 5em;
+    margin-bottom: 10vh;
+    justify-content: center;
+}
+
+
+.checkout h1 {
+    text-align: center;
+}
+
+.checkout__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: .5em;
+    margin: 1em 0;
+    border-bottom: 1px solid black;
+    letter-spacing: .02em;
+}
+
+.checkout__item-name {
+    width: 63%;
+}
+
+.checkout__item p, .checkout__menu p, .checkout__total-price {
+    font-size: 1.2em;
+}
+
+.checkout__quantity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 16%;
+    padding: .2em .4em;
+}
+
+.checkout__price {
+    width: 14%;
+    text-align: center;
+    padding: .2em .4em;
+}
+
+.checkout__list {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .02em;
+    word-spacing: .15em;
+    font-weight: 300;
+    min-height: 30vh;
+}
+
+.checkout__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.checkout__total-price {
+    font-family: 'Oswald', sans-serif;
+    margin: 3em 0;
+    letter-spacing: .03em;
+}
+
+/* .checkout__btn--section {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+} */
+
+.checkout__btn {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 1em;
+    padding: .35em .45em;
+    margin: 0 auto;
+}
+
+.checkout__btn--large {
+    width: 40%;
+    font-size: 1.2em;
+    padding: .5em .03em;
+    text-decoration: none;
+}
+
+/* .checkout__form {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+    padding: 1em;
+} */
+
+.checkout__form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    margin: 3em auto;
+    padding: 2em;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid black;
+}
+
+/* .checkout__form input {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: .07em;
+    width: 70%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 1.5em;
+} */
+
+.checkout__form input {
+    font-weight: 300;
+    letter-spacing: .07em;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 1.5em;
+}

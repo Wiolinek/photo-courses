@@ -51,7 +51,7 @@ const Cart = () => {
                 <p  className="cart__total-price">Total price: {totalAmount} EUR</p>
                 <div className="cart__btn--section">
                     <NavLink className="btn cart__btn cart__btn--large" to="/our-courses">Continue shopping</NavLink>
-                    <button className="btn cart__btn cart__btn--large">Checkout</button>
+                    <NavLink className="btn cart__btn cart__btn--large" to="/cart/checkout">Checkout</NavLink>
                 </div>
             </div>
                 : <div className="cart__empty-cart-message"><p>Check all our courses and choose perfect one for you..</p>
@@ -62,4 +62,4 @@ const Cart = () => {
     
 }
 
-export default Cart
+export default Cart;

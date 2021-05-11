@@ -20,10 +20,10 @@ const AboutUs = () => {
   }, []);
 
     let aboutUsList = about.map(item => 
-        <div key={item.id} className="about-us__list">
+        <li key={item.id} className="about-us__list">
             <img src={item.photo_about} alt={item.alt} className="about-us__img"></img>
             <p className="section-intro about-us">{item.text}</p>
-        </div>);
+        </li>);
 
     return (
         <section className="about-us">
