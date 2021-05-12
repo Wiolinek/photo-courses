@@ -1,0 +1,18 @@
+.after-order__go-back-to-home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10vh;
+}
+
+.after-order__go-back-to-home p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .3em;
+    color: black;
+}
+
+.after-order__go-back-to-home svg {
+    margin: .5em 11em .5em 2em;
+    color: black;
+}
