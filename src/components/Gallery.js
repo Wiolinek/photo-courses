@@ -9,7 +9,6 @@ const Gallery = () => {
 
 const [gallery, setGallery] = useState([]);
   
-
   useEffect(() => {
     fetch(`http://localhost:3030/slider`)
     .then(response => response.json())
@@ -17,9 +16,10 @@ const [gallery, setGallery] = useState([]);
     .catch(error => console.log(`error ${error}`))
   }, []);
 
+  
   return (
       <>
-        <ImageGallery alt={gallery.teacher_name} originalAlt={gallery.teacher_name} thumbnailAlt={gallery.teacher_name} autoPlay={true} items={gallery}/>
+        <ImageGallery alt={gallery.teacher} originalAlt={gallery.teacher} thumbnailAlt={gallery.teacher} autoPlay={true} items={gallery}/>
       </>
   ) 
 }

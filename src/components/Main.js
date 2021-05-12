@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import Gallery from './Gallery';
+import { NavLink } from 'react-router-dom';
 
-import { NavLink } from "react-router-dom";
+import Gallery from './Gallery';
 
 import '../styles/main.css';
 
 
-const Main = ( {teachersData} ) => {
+const Main = ( { teachersData } ) => {
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -15,13 +15,14 @@ const Main = ( {teachersData} ) => {
   const teachersOpinions = teachersData.map(teacher =>
     <li key={teacher.id} className="main__instructor-item">
       <div className="main__instructor-item-container">
-        <img src={teacher.photo_teacher} alt={teacher.teacher_name} className="main__instructor-img"></img>
-        <h1 className="main__instructor-name">{teacher.teacher_name}</h1>
+        <img src={teacher.photo_teacher} alt={teacher.teacher} className="main__instructor-img"></img>
+        <h1 className="main__instructor-name">{teacher.teacher}</h1>
       </div>
       <p className="main__instructor-testimonial">{teacher.testimonial}</p>
     </li>
   )
 
+  
   return (
       <main className="main">
         <div className="main__tagline">

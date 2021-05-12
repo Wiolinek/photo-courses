@@ -5,25 +5,25 @@ import '../styles/about-us.css';
 
 const AboutUs = () => {
 
+    const [about, setAbout] = useState([]);
+
     useEffect(() => {
         window.scrollTo(0,0);
     },[])
 
-    const [about, setAbout] = useState([]);
-  
+    useEffect(() => {
+        fetch(`http://localhost:3030/about`)
+        .then(response => response.json())
+        .then(result => setAbout(result))
+        .catch(error => console.log(`error ${error}`))
+    }, []);
 
-  useEffect(() => {
-    fetch(`http://localhost:3030/about`)
-    .then(response => response.json())
-    .then(result => setAbout(result))
-    .catch(error => console.log(`error ${error}`))
-  }, []);
-
-    let aboutUsList = about.map(item => 
+    const aboutUsList = about.map(item => 
         <li key={item.id} className="about-us__list">
             <img src={item.photo_about} alt={item.alt} className="about-us__img"></img>
             <p className="section-intro about-us">{item.text}</p>
         </li>);
+
 
     return (
         <section className="about-us">
@@ -37,8 +37,7 @@ const AboutUs = () => {
                 {aboutUsList}
             </ul>
         </section>
-    )
-    
+    ) 
 }
 
 export default AboutUs;

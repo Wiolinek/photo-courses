@@ -1,19 +1,18 @@
-import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
-import '../styles/our-courses.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectFilteredCourses, getCourses, resetFilters } from '../redux/coursesSlice';
 
 import Course from './Course';
 import OurCoursesFilters from './OurCoursesFilters';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { selectFilteredCourses, getCourses, resetFilters } from '../redux/coursesSlice';
+import '../styles/our-courses.css';
 
 
 const OurCourses = () => {
 
     const filteredCourses = useSelector(selectFilteredCourses);
-
     const dispatch = useDispatch();  
 
     useEffect(() => {
@@ -40,7 +39,9 @@ const OurCourses = () => {
             <OurCoursesFilters />
             <div className="courses__section">
                 {coursesList.length ? 
-                <ul className="courses__list">{coursesList}</ul> : <div><p className="courses__no-result-message">We could not find anything...</p></div>}
+                <ul className="courses__list">
+                    {coursesList}
+                </ul> : <div><p className="courses__no-result-message">We could not find anything...</p></div>}
             </div>
             <div className="courses-contact">
                 <h1 className="courses-contact__header">You didn't find what you need?</h1>
