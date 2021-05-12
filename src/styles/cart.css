@@ -13,35 +13,19 @@
     letter-spacing: .02em;
 }
 
-.cart__item-name {
-    width: 63%;
-}
-
-.cart__item p, .cart__menu p, .cart__total-price {
+.cart__menu p {
     font-size: 1.2em;
 }
 
-.cart__quantity {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 16%;
-    padding: .2em .4em;
-}
-
-.cart__quantity p {
-    padding: .2em .4em;
+.cart__menu-remove {
+    width: 7%;
+    text-align: center;
 }
 
 .cart__price {
     width: 14%;
     text-align: center;
     padding: .2em .4em;
-}
-
-.cart__menu-remove {
-    width: 7%;
-    text-align: center;
 }
 
 .cart__list {
