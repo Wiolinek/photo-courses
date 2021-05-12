@@ -1,26 +1,34 @@
-import { useState } from "react";
-
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
-
 import { selectItemsQuantity } from '../redux/cartSlice';
+
+import Menu from './Menu';
 
 import '../styles/navigation.css';
 
 
-import Menu from './Menu';
-
 const Navigation = () => {
 
     const [menuState, setMenuState] = useState(false);
-    
     const itemsQuantity = useSelector(selectItemsQuantity);
 
-    const showMenuHandler = () => {
+    const showHideMenuHandler = () => {
         setMenuState(!menuState);
     }
 
+    const hideMenuHandler = () => {
+        if(window.innerWidth > 1180 && menuState === true) {
+            setMenuState(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", hideMenuHandler);
+    });
+    
+    
     return (
         <nav>
             <div className="logo"><NavLink to="/">photo passion</NavLink></div>
@@ -38,7 +46,7 @@ const Navigation = () => {
                     <NavLink to="/login"><svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="2.5">
                     <path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" /></svg></NavLink>
                 </li>
-                <li className="nav__icon nav__icon--hidden" onClick={showMenuHandler}>
+                <li className="nav__icon nav__icon--hidden" onClick={showHideMenuHandler}>
                     {menuState ? <svg id="i-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="2.5"><path d="M2 26 L26 2 M26 26 L2 2" /></svg> : <svg id="i-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="butt" strokeLinejoin="mitter" strokeWidth="2.5"><path d="M4 8 L30 8 M4 16 L30 16 M4 24 L30 24" /></svg>}
                 </li>
             </ul>

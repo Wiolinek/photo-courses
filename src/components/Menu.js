@@ -1,11 +1,15 @@
 
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 import '../styles/menu.css';
 
 
-const Menu = ({ menuState, setMenuState }) => {
+const Menu = ( { menuState, setMenuState } ) => {
 
+    let currentWidth = window.innerWidth;
+    console.log(currentWidth)
+
+    
     return (
         <div className="menu" style={{display: menuState ? "flex" : "none"}}>
             <ul className="menu__list">

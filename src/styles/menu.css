@@ -46,9 +46,3 @@
 .menu__item a:hover {
     border-bottom: 2px solid black;
 }
-
-@media (max-width: 1180px) {
-    .menu {
-        display: flex;
-    }
-}
