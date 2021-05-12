@@ -1,0 +1,129 @@
+.teachers-card {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.teachers-card__details {
+    display: grid;
+    margin: 10vh auto;
+    grid-template-columns: repeat(auto-fit, minmax(400px, .7fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-row-gap: 4em;
+    grid-column-gap: 2em;
+    justify-content: center;
+}
+
+.teachers-card__img {
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 9px 9px 10px 3px #acacac;
+    border-radius: 6px;
+}
+
+.teachers-card__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    letter-spacing: .15em;
+    padding: .5em 0;
+    border-bottom: 5px solid black;
+}
+
+.teachers-card__desc {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5em;
+    padding: .6em;
+    letter-spacing: .05em;
+}
+
+.teachers-card__courses h3 {
+    background-color: rgb(105, 105, 114);
+    border-radius: 7px;
+    margin-bottom: 1.5em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    padding: .5em;
+    letter-spacing: .15em;
+}
+
+.teachers-card__courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, .6fr));
+    grid-auto-rows: 500px;
+    grid-gap: 3em;
+    justify-content: center;
+}
+
+
+@media (max-width: 1900px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .3fr));
+        grid-auto-rows: 480px;
+    } 
+}
+
+@media (max-width: 1600px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .3fr));
+    } 
+}
+
+@media (max-width: 1450px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .4fr));
+    }
+}
+
+@media (max-width: 1360px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .5fr));
+        grid-auto-rows: 460px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .35fr));
+        grid-auto-rows: 440px;
+    }
+    
+}
+
+@media (max-width: 1160px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(290px, .35fr));
+        grid-auto-rows: 430px;
+    }
+}
+
+@media (max-width: 800px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, .35fr));
+        grid-auto-rows: 390px;
+        grid-gap: 5em;
+    }
+}
+
+@media (max-width: 550px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, .5fr));
+        grid-auto-rows: 370px;
+        grid-gap: 5em;
+    }
+}
+
+@media (max-width: 470px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, .6fr));
+        grid-auto-rows: 350px;
+        grid-gap: 5em;
+    }
+}
+
+@media (max-width: 360px) {
+    .teachers-card__courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, .7fr));
+        grid-auto-rows: 320px;
+        grid-gap: 5em;
+    }
+}
