@@ -32,6 +32,16 @@
     margin-bottom: 1.5em;
 }
 
+.login__form label {
+    font-size: 1.2em;
+}
+
+.login__form a {
+    text-align: end;
+    text-decoration: none;
+    color: black;
+}
+
 .login__btn {
     display: flex;
     align-items: center;

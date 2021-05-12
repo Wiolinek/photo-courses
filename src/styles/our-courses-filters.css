@@ -22,3 +22,7 @@
     font-size: 1.2em;
     font-family: 'Dosis', sans-serif;
 }
+
+.courses__filters svg {
+    margin: .7em;
+}
