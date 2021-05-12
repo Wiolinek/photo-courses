@@ -1,18 +1,16 @@
 import { useEffect } from 'react';
-
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-
 import { emptyCart } from '../redux/cartSlice';
-
 
 import '../styles/checkout.css';
 
+
 const Checkout = () => {
 
-    const { cart } = useSelector((state) => state.cart);
-    const totalAmount = useSelector((state) => state.cart.totalAmount);
+    const { cart } = useSelector(state => state.cart);
+    const totalAmount = useSelector(state => state.cart.totalAmount);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,11 +24,12 @@ const Checkout = () => {
             <p className="checkout__price">{course.quantity * course.price} EUR</p>
         </li>)
 
+
     return (
         <section className="checkout">
             <div>
                 <h1>Order summary</h1>
-                <div>
+                <div className="checkout__summary">
                     <div className="checkout__menu">
                         <p className="checkout__item-name">Course name</p>
                         <p className="checkout__quantity">Quantity</p>
@@ -39,7 +38,7 @@ const Checkout = () => {
                     <ul className="checkout__list">
                         {coursesList}
                     </ul>
-                    <p  className="checkout__total-price">Total price: {totalAmount} EUR</p>
+                    <p className="checkout__total-price">To pay: {totalAmount} EUR</p>
                 </div>
                 <NavLink className="btn checkout__btn checkout__btn--large" to="/cart">Back to Cart</NavLink>
             </div>
@@ -55,11 +54,10 @@ const Checkout = () => {
                         <label>City<br/><input type="text" name="city" required></input></label>
                     </form>
                 </div>
-                <button type="submit"className="btn checkout__btn checkout__btn--large" onClick={() => dispatch(emptyCart())}>Buy</button>
+                <button type="submit"className="btn checkout__btn checkout__btn--large" onClick={() => dispatch(emptyCart())}><NavLink to="/cart/after_order">Buy</NavLink></button>
             </div>
         </section>
     )
-    
 }
 
 export default Checkout;

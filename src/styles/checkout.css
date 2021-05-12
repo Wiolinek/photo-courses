@@ -7,9 +7,13 @@
     justify-content: center;
 }
 
-
 .checkout h1 {
     text-align: center;
+}
+
+.checkout__summary {
+    margin: 3em auto;
+    width: 80%;
 }
 
 .checkout__menu {
@@ -27,16 +31,14 @@
     width: 63%;
 }
 
-.checkout__item p, .checkout__menu p, .checkout__total-price {
+.checkout__item p, .checkout__menu p {
     font-size: 1.2em;
 }
 
 .checkout__quantity {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 16%;
     padding: .2em .4em;
+    text-align: center;;
 }
 
 .checkout__price {
@@ -53,25 +55,18 @@
     min-height: 30vh;
 }
 
-.checkout__item {
+.checkout__item, .checkout__menu  {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 1em 0;
 }
 
 .checkout__total-price {
+    text-align: end;
     font-family: 'Oswald', sans-serif;
-    margin: 3em 0;
+    font-size: 1.2em;
+    padding-right: .4em;
     letter-spacing: .03em;
 }
-
-/* .checkout__btn--section {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    margin-bottom: 10vh;
-} */
 
 .checkout__btn {
     display: flex;
@@ -89,15 +84,14 @@
     text-decoration: none;
 }
 
-/* .checkout__form {
-    display: flex;
-    flex-direction: column;
-    margin: 3em 0;
-    padding: 1em;
-} */
+.checkout__btn--large a {
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
 
 .checkout__form {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     border-radius: 6px;
@@ -107,16 +101,9 @@
     border: 1px solid black;
 }
 
-/* .checkout__form input {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    letter-spacing: .07em;
-    width: 70%;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 1.5em;
-} */
+.checkout__form label {
+    font-size: 1.2em;
+}
 
 .checkout__form input {
     font-weight: 300;
