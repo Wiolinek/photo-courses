@@ -9,7 +9,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import AfterOrder from './components/AfterOrder';
 import LogIn from './components/LogIn';
+
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -53,6 +55,9 @@ const App = () => {
       </Route>
       <Route path="/cart/checkout" component={Checkout}>
           <Checkout />
+      </Route>
+      <Route path="/cart/after_order" component={AfterOrder}>
+          <AfterOrder />
       </Route>
       <Route path="/login" component={LogIn}>
           <LogIn />
