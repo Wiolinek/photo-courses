@@ -36,7 +36,7 @@
 
 .main__tagline p {
     font-family: 'Playfair Display', serif;
-    font-size: 3.2em;
+    font-size: 3em;
     line-height: 1.6em;
     margin: .5em 0;
     width: 60%;
@@ -192,64 +192,86 @@
 
 @media (max-width: 1450px) {
     .main__instructor-testimonial {
-        font-size: 1.8em;
+        font-size: 1.7em;
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 660px); 
     }
 }
 
 @media (max-width: 1360px) {
     .main__instructors-list {
-        grid-auto-rows: minmax(320px, 650px); 
+        grid-auto-rows: minmax(320px, 620px); 
     }
 }
 
 @media (max-width: 1260px) {
     .main__instructor-testimonial {
-        font-size: 1.8em;
-    }
-    .main__instructors-list {
-        grid-auto-rows: minmax(320px, 630px); 
-    }
-}
-
-@media (max-width: 1160px) {
-    .main__instructor-testimonial {
-        font-size: 1.9em;
-    }
-    .main__instructors-list {
-        grid-auto-rows: minmax(320px, 600px); 
-    }
-}
-
-@media (max-width: 800px) {
-    .main__instructor-testimonial {
-        font-size: 2em;
+        font-size: 1.7em;
     }
     .main__instructors-list {
         grid-auto-rows: minmax(320px, 580px); 
     }
 }
 
+@media (max-width: 1160px) {
+    .main__instructor-testimonial {
+        font-size: 1.8em;
+    }
+    .main__advantages--first, .main__advantages--second {
+        grid-template-columns: repeat(auto-fit, minmax(500px, .6fr));
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 560px);
+    }
+}
+
+@media (max-width: 800px) {
+    .main__instructor-testimonial {
+        font-size: 1.9em;
+    }
+    .main__advantages--first, .main__advantages--second {
+        grid-template-columns: repeat(auto-fit, minmax(500px, .7fr));
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(320px, 530px);
+    }
+}
+
 @media (max-width: 550px) {
     .main__instructor-testimonial {
-        font-size: 2.2em;
+        font-size: 2.1em;
+    }
+    .main__advantages--first, .main__advantages--second {
+        grid-template-columns: repeat(auto-fit, minmax(440px, .7fr));
+    }
+    .main__instructors-list {
+        grid-auto-rows: minmax(300px, 540px);
     }
 }
 
 @media (max-width: 470px) {
     .main__instructor-testimonial {
-        font-size: 2.3em;
+        font-size: 2.1em;
+    }
+    .main__advantages--first, .main__advantages--second {
+        grid-template-columns: repeat(auto-fit, minmax(350px, .7fr));
     }
     .main__instructors-list {
-        grid-auto-rows: minmax(320px, 540px); 
+        grid-template-columns: repeat(auto-fill, minmax(300px, .6fr));
+        grid-auto-rows: minmax(300px, 470px);
     }
 }
 
 @media (max-width: 360px) {
     .main__instructor-testimonial {
-        font-size: 2.4em;
+        font-size: 2.2em;
+    }
+    .main__advantages--first, .main__advantages--second {
+        grid-template-columns: repeat(auto-fit, minmax(300px, .7fr));
     }
     .main__instructors-list {
-        grid-auto-rows: minmax(320px, 500px); 
+        grid-template-columns: repeat(auto-fill, minmax(250px, .6fr));
+        grid-auto-rows: minmax(200px, 430px);
     }
 }
-

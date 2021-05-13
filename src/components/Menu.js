@@ -6,9 +6,6 @@ import '../styles/menu.css';
 
 const Menu = ( { menuState, setMenuState } ) => {
 
-    let currentWidth = window.innerWidth;
-    console.log(currentWidth)
-
     
     return (
         <div className="menu" style={{display: menuState ? "flex" : "none"}}>

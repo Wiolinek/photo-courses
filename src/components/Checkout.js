@@ -18,7 +18,7 @@ const Checkout = () => {
     },[])
 
     const coursesList = cart.map(course => 
-        <li key={course.id} className="checkout__item">
+        <li key={course.course_id} className="checkout__item">
             <p className="checkout__item-name">{course.name}</p>
             <p className="checkout__quantity">{course.quantity}</p>
             <p className="checkout__price">{course.quantity * course.price} EUR</p>

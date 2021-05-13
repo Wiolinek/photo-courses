@@ -23,7 +23,7 @@ const OurTeachers = ( { teachersData } ) => {
     teachersData = teachersData.map(teacher => ({...teacher, teacher_courses: teacher.teacher_courses.split(',').map(item => parseInt(item))}));
 
     let teachersList = teachersData.map(teacher =>
-        <OurTeachersCard teacher={teacher} teachersData={teachersData}/>
+        <OurTeachersCard key={teacher.id} teacher={teacher} teachersData={teachersData}/>
     )
 
 

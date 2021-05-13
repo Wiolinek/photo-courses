@@ -16,7 +16,7 @@ const Cart = () => {
         window.scrollTo(0,0);
     },[])
 
-    const coursesList = cart.map(course => <CartCoursesList course={course}/>)
+    const coursesList = cart.map(course => <CartCoursesList key={course.course_id} course={course}/>)
 
 
     return (

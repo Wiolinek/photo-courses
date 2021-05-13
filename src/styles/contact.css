@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, .8fr));
     grid-template-rows: repeat(auto-fill, minmax(270px, 2fr));
+    justify-content: center;
     grid-auto-rows: 270px;
     grid-gap: 1em;
     margin: 3vh 1em 10vh;
@@ -24,7 +25,11 @@
     display: flex;
     flex-direction: column;
     margin: 3em 0;
-    padding: 1em;
+    /* padding: 1em; */
+}
+
+.contact__form label {
+    font-size: 1.2em;
 }
 
 .contact__form input {
@@ -46,6 +51,7 @@
     outline: none;
     border: none;
     border: 1px solid black;
+    margin-top: 1em;
 }
 
 .contact__btn {
@@ -77,4 +83,39 @@
 
 .contact__circle p {
     margin: 3em 1em 3em 0;
+}
+
+@media (max-width: 800px) {
+    .contact__container {
+        grid-template-columns: repeat(auto-fit, minmax(450px, .8fr));
+        grid-template-rows: repeat(auto-fill, minmax(130px, 2fr));
+    }
+    .contact__form input {
+        width: 60%;
+    }
+}
+
+@media (max-width: 550px) {
+    .contact__container {
+        grid-template-columns: repeat(auto-fit, minmax(390px, .8fr));
+        grid-template-rows: repeat(auto-fill, minmax(130px, 2fr));
+        grid-auto-rows: 240px;
+    }
+}
+
+@media (max-width: 470px) {
+    .contact__container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, .8fr));
+        grid-template-rows: repeat(auto-fill, minmax(100px, 2fr));
+        grid-auto-rows: 200px;
+    }
+    .contact__form input {
+        width: 70%;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact__container {
+        grid-template-columns: repeat(auto-fit, minmax(290px, .8fr));
+    }
 }

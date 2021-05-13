@@ -10,8 +10,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, .7fr));
     grid-template-rows: repeat(auto-fill, minmax(270px, 2fr));
-    grid-auto-rows: 270px;
-    grid-auto-columns: 270px;
+    grid-auto-rows: 220px;
     grid-gap: 2em;
     align-items: center;
     justify-content: center;
@@ -45,6 +44,10 @@
     grid-column: 2 / 3;
 }
 
+@media (max-width: 1450px) {
+
+}
+
 @media (max-width: 1360px) {
     .about-us__list {
         grid-template-columns: minmax(400px, .7fr);
@@ -56,5 +59,21 @@
     .about-us__img, .about-us__list:nth-child(even) .about-us__img {
         grid-column: 1 / 1;
         grid-row: 1 / 1;
+    }
+}
+
+@media (max-width: 470px) {
+    .about-us__list {
+        grid-template-columns: repeat(1, minmax(310px, .7fr));
+        /* grid-template-rows: repeat(auto-fill, minmax(270px, 2fr)); */
+        grid-auto-rows: 130px;
+    }
+}
+
+@media (max-width: 360px) {
+    .about-us__list {
+        grid-template-columns: repeat(1, minmax(270px, .7fr));
+        /* grid-template-rows: repeat(auto-fill, minmax(270px, 2fr)); */
+        grid-auto-rows: 80px;
     }
 }

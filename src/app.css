@@ -61,7 +61,10 @@ section h1 {
     border: none;
     background-color: rgb(105, 105, 114);
     outline: none;
-    cursor: pointer; 
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 1450px) {
