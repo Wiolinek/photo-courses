@@ -33,14 +33,14 @@ const Checkout = () => {
                     <div className="checkout__menu">
                         <p className="checkout__item-name">Course name</p>
                         <p className="checkout__quantity">Quantity</p>
-                        <p className="checkout__price">Price</p>
+                        <p className="checkout__price">EUR</p>
                     </div>
                     <ul className="checkout__list">
                         {coursesList}
                     </ul>
                     <p className="checkout__total-price">To pay: {totalAmount} EUR</p>
                 </div>
-                <NavLink className="btn checkout__btn checkout__btn--large" to="/cart">Back to Cart</NavLink>
+                <NavLink className="checkout__btn" to="/cart">Back to Cart</NavLink>
             </div>
             <div>
                 <h1>Address details</h1>
@@ -54,7 +54,7 @@ const Checkout = () => {
                         <label>City<br/><input type="text" name="city" required></input></label>
                     </form>
                 </div>
-                <button type="submit"className="btn checkout__btn checkout__btn--large" onClick={() => dispatch(emptyCart())}><NavLink to="/cart/after_order">Buy</NavLink></button>
+                <button type="submit"className="checkout__btn" onClick={() => dispatch(emptyCart())}><NavLink to="/cart/after_order">Buy</NavLink></button>
             </div>
         </section>
     )
