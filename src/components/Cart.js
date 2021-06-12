@@ -27,7 +27,7 @@ const Cart = () => {
                 <div className="cart__menu">
                     <p className="cart__item-name">Course name</p>
                     <p className="cart__quantity">Quantity</p>
-                    <p className="cart__price">Price</p>
+                    <p className="cart__price">EUR</p>
                     <p className="cart__menu-remove">Remove</p>
                 </div>
                 <ul className="cart__list">
@@ -35,8 +35,8 @@ const Cart = () => {
                 </ul>
                 <p  className="cart__total-price">Total price: {totalAmount} EUR</p>
                 <div className="cart__btn--section">
-                    <NavLink className="btn cart__btn cart__btn--large" to="/our-courses">Continue shopping</NavLink>
-                    <NavLink className="btn cart__btn cart__btn--large" to="/cart/checkout">Checkout</NavLink>
+                    <NavLink className="cart__btn--large" to="/our-courses">Continue shopping</NavLink>
+                    <NavLink className="cart__btn--large" to="/cart/checkout">Checkout</NavLink>
                 </div>
             </div>
                 : <div className="cart__empty-cart-message"><p>Check all our courses and choose perfect one for you..</p>

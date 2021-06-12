@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     padding-bottom: .5em;
     margin: 1em 0;
     border-bottom: 1px solid black;
@@ -29,7 +29,7 @@
 }
 
 .cart__list {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     letter-spacing: .02em;
     word-spacing: .15em;
     font-weight: 300;
@@ -44,9 +44,10 @@
 }
 
 .cart__total-price {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     margin: 3em 0;
     letter-spacing: .03em;
+    font-size: 1.2em;
 }
 
 .cart__btn--section {
@@ -57,19 +58,35 @@
 }
 
 .cart__btn {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    font-size: 1em;
     padding: .35em .45em;
     margin: 0 auto;
+    transition: background-color .8s;
+}
+
+.cart__btn:hover {
+    background-color: white;
 }
 
 .cart__btn--large {
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font-family);
+    letter-spacing: .3em;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: var(--primary-color);
+    outline: none;
+    cursor: pointer;
     width: 35%;
     font-size: 1.2em;
     padding: .5em .03em;
     text-decoration: none;
+    transition: background-color .8s;
+}
+
+.cart__btn--large:hover {
+    background-color: white;
 }
 
 .cart__empty-cart-message {
@@ -80,7 +97,7 @@
 }
 
 .cart__empty-cart-message p {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 1.2em;
     letter-spacing: .3em;
     color: black;
@@ -89,4 +106,51 @@
 .cart__empty-cart-message svg {
     margin: .5em 11em .5em 2em;
     color: black;
+}
+
+
+@media (max-width: 1450px) {
+
+}
+
+@media (max-width: 1360px) {
+    
+}
+
+@media (max-width: 1260px) {
+
+}
+
+@media (max-width: 1160px) {
+    .cart__btn--large {
+        width: 37%;
+    }
+}
+
+@media (max-width: 800px) {
+    .cart__btn--large {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .cart__btn--large {
+        width: 43%;
+    }
+}
+
+@media (max-width: 550px) {
+
+}
+
+@media (max-width: 470px) {
+        .cart__btn--large {
+            width: 45%;
+        }
+}
+
+@media (max-width: 360px) {
+        .cart__btn--large {
+            width: 48%;
+        }
 }
