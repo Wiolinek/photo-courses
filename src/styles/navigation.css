@@ -8,7 +8,7 @@ nav {
     top: 0;
     left: 0;
     width: 100vw;
-    background-color: rgb(105, 105, 114);
+    background-color: var(--primary-color);
     z-index: 2;
 }
 
@@ -31,14 +31,14 @@ nav .logo {
 }
 
 .nav__item a {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 1.1rem;
     letter-spacing: .2em;
     text-decoration: none;
     color: black;
     padding: .2em 1em;
     border-bottom: 2px solid transparent;
-    transition: all .8s;
+    transition: border-bottom .8s;
 }
 
 .nav__item a:hover {
@@ -78,5 +78,11 @@ nav .logo {
 
     .nav__icon--hidden {
         display: block;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav__item a {
+        font-size: .9rem;
     }
 }
