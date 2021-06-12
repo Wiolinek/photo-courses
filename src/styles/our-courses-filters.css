@@ -6,6 +6,7 @@
     min-height: 10vh;
     background-color: var(--primary-color);
     margin-top: 10vh;
+    padding: .8em;
     border-radius: 6px;
 }
 
@@ -23,9 +24,6 @@
     font-family: var(--secondary-font-family);
 }
 
-.courses__filters svg {
-    margin: .7em;
-}
 
 @media (max-width: 800px) {
     .courses__filters {
@@ -37,14 +35,8 @@
     }
 }
 
-@media (max-width: 550px) {
-
-}
-
-@media (max-width: 470px) {
-
-}
-
-@media (max-width: 360px) {
-
+@media (max-width: 690px) {
+    .courses__filters svg {
+        display: none;
+    }
 }
