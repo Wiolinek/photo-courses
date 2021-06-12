@@ -5,7 +5,7 @@
 
 .teachers-card__details {
     display: grid;
-    margin: 10vh auto;
+    margin: 15vh auto 5vh auto;
     grid-template-columns: repeat(auto-fit, minmax(400px, .7fr));
     grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
     grid-row-gap: 4em;
@@ -21,7 +21,7 @@
 }
 
 .teachers-card__name {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 3rem;
     letter-spacing: .15em;
     padding: .5em 0;
@@ -29,7 +29,7 @@
 }
 
 .teachers-card__desc {
-    font-family: 'Dosis', sans-serif;
+    font-family: var(--secondary-font-family);
     font-size: 2rem;
     line-height: 1.5em;
     padding: .6em;
@@ -37,10 +37,10 @@
 }
 
 .teachers-card__courses h3 {
-    background-color: rgb(105, 105, 114);
+    background-color: var(--primary-color);
     border-radius: 7px;
     margin-bottom: 1.5em;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 2rem;
     padding: .5em;
     letter-spacing: .15em;
@@ -79,6 +79,9 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, .5fr));
         grid-auto-rows: 460px;
     }
+    .teachers-card__img {
+        width: 80%;
+    }
 }
 
 @media (max-width: 1260px) {
@@ -86,7 +89,6 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, .35fr));
         grid-auto-rows: 440px;
     }
-    
 }
 
 @media (max-width: 1160px) {
@@ -100,7 +102,6 @@
     .teachers-card__courses-list {
         grid-template-columns: repeat(auto-fill, minmax(280px, .35fr));
         grid-auto-rows: 390px;
-        grid-gap: 5em;
     }
 }
 
@@ -116,7 +117,10 @@
     .teachers-card__courses-list {
         grid-template-columns: repeat(auto-fill, minmax(220px, .6fr));
         grid-auto-rows: 350px;
-        grid-gap: 5em;
+    }
+    .teachers-card__details {
+        grid-template-columns: repeat(auto-fit, minmax(320px, .7fr));
+        grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
@@ -124,6 +128,8 @@
     .teachers-card__courses-list {
         grid-template-columns: repeat(auto-fill, minmax(200px, .7fr));
         grid-auto-rows: 320px;
-        grid-gap: 5em;
+    }
+    .teachers-card__details {
+        grid-template-columns: repeat(auto-fit, minmax(260px, .7fr));
     }
 }

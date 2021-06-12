@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-family: 'Dosis', sans-serif;
+    font-family: var(--secondary-font-family);
     min-height: 10vh;
-    background-color: rgb(105, 105, 114);
+    background-color: var(--primary-color);
     margin-top: 10vh;
     border-radius: 6px;
 }
@@ -20,9 +20,31 @@
 
 .courses__filters option {
     font-size: 1.2em;
-    font-family: 'Dosis', sans-serif;
+    font-family: var(--secondary-font-family);
 }
 
 .courses__filters svg {
     margin: .7em;
+}
+
+@media (max-width: 800px) {
+    .courses__filters {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 10vh;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 550px) {
+
+}
+
+@media (max-width: 470px) {
+
+}
+
+@media (max-width: 360px) {
+
 }
