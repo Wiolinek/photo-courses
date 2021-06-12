@@ -1,5 +1,5 @@
 .image-gallery-icon {
-    color:rgb(105, 105, 114);
+    color:var(--primary-color);
     transition: all .8s ease-out;
     appearance: none;
     background-color: transparent;
@@ -10,7 +10,7 @@
     z-index: 4; }
     @media (min-width: 768px) {
       .image-gallery-icon:hover {
-        color: rgb(105, 105, 114); }
+        color: var(--primary-color); }
         .image-gallery-icon:hover .image-gallery-svg {
           transform: scale(1.1); } }
     .image-gallery-icon:focus {
@@ -173,7 +173,7 @@
     .image-gallery-bullets .image-gallery-bullet {
       appearance: none;
       background-color: transparent;
-      border: 1px solid rgb(105, 105, 114);
+      border: 1px solid var(--primary-color);
       border-radius: 50%;
       box-shadow: 0 1px 0 #1a1a1a;
       cursor: pointer;
@@ -259,10 +259,10 @@
       line-height: 0; }
     .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus {
       outline: none;
-      border: 3px solid rgb(105, 105, 114); }
+      border: 3px solid var(--primary-color); }
       @media (max-width: 768px) {
         .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus {
-          border: 2px solid rgb(105, 105, 114); } }
+          border: 2px solid var(--primary-color); } }
   
   .image-gallery-thumbnail-label {
     box-sizing: border-box;

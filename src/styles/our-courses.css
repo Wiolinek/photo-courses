@@ -19,7 +19,7 @@
 
 .courses-contact {
     min-height: 10vh;
-    background-color: rgb(105, 105, 114);
+    background-color: var(--primary-color);
     margin-bottom: 10vh;
     border-radius: 6px;
     display: flex;
@@ -38,7 +38,7 @@
 }
 
 .courses-contact__description, .courses__no-result-message {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 2em;
     letter-spacing: .08em;
     font-weight: 300;
@@ -52,7 +52,7 @@
 }
 
 .courses-contact__link p {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 1.2em;
     letter-spacing: .3em;
 }

@@ -26,7 +26,7 @@
 }
 
 .about-us__list p {
-    font-family: 'Dosis', sans-serif;
+    font-family: var(--secondary-font-family);
     font-size: 2rem;
     line-height: 1.5em;
     padding: .6em;
@@ -42,10 +42,6 @@
 
 .about-us__list:nth-child(even) p {
     grid-column: 2 / 3;
-}
-
-@media (max-width: 1450px) {
-
 }
 
 @media (max-width: 1360px) {
@@ -65,7 +61,6 @@
 @media (max-width: 470px) {
     .about-us__list {
         grid-template-columns: repeat(1, minmax(310px, .7fr));
-        /* grid-template-rows: repeat(auto-fill, minmax(270px, 2fr)); */
         grid-auto-rows: 130px;
     }
 }
@@ -73,7 +68,6 @@
 @media (max-width: 360px) {
     .about-us__list {
         grid-template-columns: repeat(1, minmax(270px, .7fr));
-        /* grid-template-rows: repeat(auto-fill, minmax(270px, 2fr)); */
         grid-auto-rows: 80px;
     }
 }

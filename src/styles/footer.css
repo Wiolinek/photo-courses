@@ -1,6 +1,6 @@
 footer {
-    background-color: rgb(105, 105, 114);
-    height: 7vh;
+    background-color: var(--primary-color);
+    min-height: 7vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -12,4 +12,5 @@ footer a {
 
 footer i {
     font-size: 1.9em;
+    /* margin: .6em 0; */
 }

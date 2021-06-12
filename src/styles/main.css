@@ -4,14 +4,14 @@
 }
 
 .main__header {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 2.5em;
     margin-bottom: 3vh;
     letter-spacing: .08em;
 }
 
 .main__description {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 2em;
     letter-spacing: .08em;
     font-weight: 300;
@@ -19,7 +19,7 @@
 
 .main__tagline {
     background-image: url('../backgrounds/back_2.jpg');
-    background-color: rgb(105, 105, 114);
+    background-color: var(--secondary-color);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@
     line-height: 1.6em;
     margin: .5em 0;
     width: 60%;
-    color: rgb(207, 205, 205);
+    color: rgb(200, 200, 200);
     text-shadow: 7px 7px 20px black;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .main__instructors-list h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 3rem;
     letter-spacing: .15em;
     padding: .5em;
@@ -112,7 +112,7 @@
 }
 
 .main__instructor-item {
-    background-color: rgb(105, 105, 114);
+    background-color: var(--primary-color);
     box-shadow: 9px 9px 10px 3px #acacac;
     border-radius: 6px;
 }
@@ -136,7 +136,7 @@
     grid-row: 1 / 1;
     z-index: 1;
     font-size: .5rem;
-    color: rgb(207, 205, 205);
+    color: rgb(230, 230, 230);
     text-shadow: 7px 7px 20px black;
 }
 
@@ -169,7 +169,7 @@
 }
 
 .main__learn-more p {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 1.2em;
     letter-spacing: .3em;
     color: black;
@@ -177,7 +177,7 @@
 
 .main__tagline--bottom {
     background-image: url('../backgrounds/back_7.jpg');
-    background-color: grey;
+    background-color: var(--secondary-color);
     background-blend-mode: screen;
     min-height: 45vh;
     grid-column: 1 / -1;
@@ -187,7 +187,7 @@
 
 .main__tagline--bottom p {
     color: black;
-    text-shadow: 7px 7px 20px rgb(207, 205, 205);
+    text-shadow: 7px 7px 20px var(--secondary-color);
 }
 
 @media (max-width: 1450px) {
