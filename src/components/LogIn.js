@@ -29,7 +29,7 @@ const LogIn = () => {
                     <label>Email<br/><input type="email" name="mail" required></input></label>
                     <label>Password<br/><input type="password" name="password" required></input></label>
                     <button className="login__btn" type="submit">LogIn</button>
-                    <NavLink className="login-section__reset-password" to="/">Reset password</NavLink>
+                    <NavLink to="/">Reset password</NavLink>
                 </form>
             </div>
         </section>
