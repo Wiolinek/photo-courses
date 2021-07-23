@@ -14,9 +14,9 @@
 }
 
 .contact__phone, .contact__address, .contact__mail {
-    margin: .35em 0;
     display: flex;
     align-items: center;
+    margin: .35em 0;
 }
 
 .contact__phone p, .contact__address p, .contact__mail p {

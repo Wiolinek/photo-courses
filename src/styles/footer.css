@@ -1,9 +1,9 @@
 footer {
-    background-color: var(--primary-color);
-    min-height: 7vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: var(--primary-color);
+    min-height: 7vh;
 }
 
 footer a {

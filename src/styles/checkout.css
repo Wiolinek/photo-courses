@@ -21,10 +21,10 @@
     align-items: center;
     justify-content: center;
     font-family: var(--primary-font-family);
+    letter-spacing: .02em;
     padding-bottom: .5em;
     margin: 1em 0;
     border-bottom: 1px solid black;
-    letter-spacing: .02em;
 }
 
 .checkout__item-name {
@@ -71,14 +71,14 @@
 .checkout__btn {
     display: flex;
     justify-content: center;
+    font-family: var(--primary-font-family);
+    font-size: 1.2em;
+    letter-spacing: .3em;
+    color: black;
+    padding: .5em .03em;
     margin: 0 auto;
     border: 1px solid black;
     width: 40%;
-    font-size: 1.2em;
-    padding: .5em .03em;
-    font-family: var(--primary-font-family);
-    letter-spacing: .3em;
-    color: black;
     border-radius: 6px;
     background-color: var(--primary-color);
     outline: none;
@@ -101,11 +101,11 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    border-radius: 6px;
-    margin: 3em auto;
-    padding: 2em;
     font-family: var(--primary-font-family);
+    padding: 2em;
+    margin: 3em auto;
     border: 1px solid black;
+    border-radius: 6px;
 }
 
 .checkout__form label {

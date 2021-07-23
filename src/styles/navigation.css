@@ -1,5 +1,4 @@
 nav {
-    min-height: 7vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto;
@@ -8,6 +7,7 @@ nav {
     top: 0;
     left: 0;
     width: 100vw;
+    min-height: 7vh;
     background-color: var(--primary-color);
     z-index: 2;
 }
@@ -24,10 +24,10 @@ nav .logo {
 }
 
 .nav__item {
-    list-style: none;
     text-align: center;
     align-self: center;
     padding: .3em;
+    list-style: none;
 }
 
 .nav__item a {

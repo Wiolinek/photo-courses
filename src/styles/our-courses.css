@@ -18,13 +18,13 @@
 }
 
 .courses-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     min-height: 10vh;
     background-color: var(--primary-color);
     margin-bottom: 10vh;
     border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 }
 
 .courses-contact__header {

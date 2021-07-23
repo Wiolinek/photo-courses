@@ -61,10 +61,10 @@
     font-size: 1.2em;
     padding: .5em .3em;
     margin: 1em 0 .5em auto;
-    border: 1px solid black;
     font-family: var(--primary-font-family);
     letter-spacing: .3em;
     color: black;
+    border: 1px solid black;
     border-radius: 6px;
     background-color: var(--primary-color);
     outline: none;
