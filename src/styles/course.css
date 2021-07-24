@@ -5,7 +5,7 @@
     font-family: var(--secondary-font-family);
     padding: .9em;
     background-size: cover;
-    background-color: var(--secondary-color);
+    background-color: rgb(172, 172, 172);
     background-blend-mode: screen;
     border-radius: 6px;
     box-shadow: 9px 9px 10px 3px #acacac;

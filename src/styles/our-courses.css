@@ -57,7 +57,7 @@
     letter-spacing: .3em;
 }
 
-@media (max-width: 1900px) {
+@media (max-width: 20000px) {
     .courses__list {
         grid-template-columns: repeat(auto-fill, minmax(300px, .3fr));
         grid-auto-rows: 480px;

@@ -55,7 +55,7 @@
 }
 
 
-@media (max-width: 1900px) {
+@media (max-width: 20000px) {
     .teachers-card__courses-list {
         grid-template-columns: repeat(auto-fill, minmax(300px, .3fr));
         grid-auto-rows: 480px;

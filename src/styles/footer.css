@@ -1,16 +1,28 @@
 footer {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--primary-color);
-    min-height: 7vh;
+    min-height: 6vh;
+    width: 100vW;
 }
 
-footer a {
+footer div {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div a {
     color: black;
+    text-decoration: none;
 }
 
-footer i {
+footer div a i {
     font-size: 1.9em;
-    /* margin: .6em 0; */
+    margin: .5em 0;
+}
+
+footer div p {
+    color: black;
+    padding: .4rem;
 }

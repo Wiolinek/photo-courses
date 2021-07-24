@@ -24,7 +24,6 @@
     font-family: var(--secondary-font-family);
 }
 
-
 @media (max-width: 800px) {
     .courses__filters {
         display: flex;
