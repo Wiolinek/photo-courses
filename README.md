@@ -33,7 +33,7 @@ Project was created to learn all technologies used here know and practice.
 
 
 ## Screenshots
-![Example screenshot](../public/photopassion.png)
+![Example screenshot](./../public/photopassion.png)
 
 
 ## Setup
