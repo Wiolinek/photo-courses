@@ -33,7 +33,9 @@ Project was created to learn all technologies used here know and practice.
 
 
 ## Screenshots
-![](public/photopassion.png)
+![](public/main.png)
+![](public/courses.png)
+![](public/cart.png)
 
 
 ## Setup
