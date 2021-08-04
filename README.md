@@ -1,6 +1,6 @@
-# Photo Courses
+# Photo Passion
 
-> Photo Courses is a website providing variety of online and stationery photo courses.  User can learn about the school, teachers and different kind of courses provided on many photographic areas, in different location in Germany and few levels of photographic knowledge.
+> Photo Passion is a website providing variety of online and stationery photo courses.  User can learn about the school, teachers and different kind of courses provided on many photographic areas, in different location in Germany and few levels of photographic knowledge.
 
 It is also a online store where user can order photo course/s, send order by using basket and modify quantity there.
 
