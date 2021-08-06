@@ -23,7 +23,7 @@ const App = () => {
   const [teachersData, setTeachersData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3030/teachers`)
+    fetch(`https://photopassion.ultra-violet.codes/teachers`)
     .then(response => response.json())
     .then(result => setTeachersData(result))
     .catch(error => console.log(`error ${error}`))
