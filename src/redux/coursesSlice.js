@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const getCourses = createAsyncThunk(
   'courses/getCourses',
   async () => {
-    const response = await fetch(`http://localhost:3030/courses`);
+    const response = await fetch(`https://photopassion.ultra-violet.codes/courses`);
     if (response.ok) {
         const courses = await response.json();
         return courses;
@@ -16,7 +16,7 @@ export const getFilteredCourses = createAsyncThunk(
     'courses/getFilteredCourses',
     async (_, { getState }) => {
       const { courses } = getState();
-      const response = await fetch(`http://localhost:3030/courses/filter`,
+      const response = await fetch(`https://photopassion.ultra-violet.codes/courses/filter`,
       {method: 'POST',
       headers: {
         'Content-Type': 'application/json',

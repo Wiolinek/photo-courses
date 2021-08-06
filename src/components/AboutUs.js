@@ -12,7 +12,7 @@ const AboutUs = () => {
     },[])
 
     useEffect(() => {
-        fetch(`http://photopassion.ultra-violet.codes/about`)
+        fetch(`https://photopassion.ultra-violet.codes/about`)
         .then(response => response.json())
         .then(result => setAbout(result))
         .catch(error => console.log(`error ${error}`))
