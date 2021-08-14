@@ -97,4 +97,4 @@ You are allowed to use it for both personal and commercial use, but not to claim
 
 ## Contact
 
-Created by [@Wiolinek](https://www.u-v.codes) - feel free to contact me!
+Created by [@Wiolinek](https://github.com/Wiolinek) - feel free to contact me!
