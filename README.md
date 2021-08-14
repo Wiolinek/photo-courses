@@ -1,25 +1,25 @@
 # Photo Passion
 
-> Photo Passion is a website providing variety of online and stationery photo courses.  User can learn about the school, teachers and different kind of courses provided on many photographic areas, in different location in Germany and few levels of photographic knowledge.
+> Photo Passion is a website providing variety of online and stationery photo courses. User can learn about the school, teachers and different kind of courses provided on many photographic areas, in different location in Germany and few levels of photographic knowledge.
 
 It is also a online store where user can order photo course/s, send order by using basket and modify quantity there.
 
 Project was created to learn all technologies used here know and practice.
 
-
 > Live demo [_here_](https://www.example.com).
 
-
 ## Table of Contents
-* [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)	
-* [Contact](#contact)
 
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [License](#license)
+- [Contact](#contact)
 
 ## Technologies Used
+
 - React
 - React Router
 - Redux
@@ -31,12 +31,11 @@ Project was created to learn all technologies used here know and practice.
 - Express.js
 - MySQL
 
-
 ## Screenshots
+
 ![](public/main.png)
 ![](public/courses.png)
 ![](public/cart.png)
-
 
 ## Setup
 
@@ -81,15 +80,21 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-
 ## Project Status
+
 Project is: _complete_
 
-
 ## Room for Improvement
+
 - registration and login option
 - sending orders to database
 
+## License
+
+This website was built by Wiola Polok www.u-v.codes.
+Copyright @ 2021 Wiola Polok www.u-v.codes. All Rights Reserved.
+You are allowed to use it for both personal and commercial use, but not to claim it as your own design.
 
 ## Contact
+
 Created by [@Wiolinek](https://www.u-v.codes) - feel free to contact me!
