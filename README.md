@@ -6,7 +6,7 @@ It is also a online store where user can order photo course/s, send order by usi
 
 Project was created to learn all technologies used here know and practice.
 
-> Live demo [_here_](https://megaclinic.ultra-violet.codes/).
+> Live demo [_here_](https://photopassion.ultra-violet.codes/).
 login is not working on production - only localy - some bug during installing node modules - TO FIX
 
 ## Table of Contents
